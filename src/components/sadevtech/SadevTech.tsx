@@ -8,22 +8,21 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import TechNavbar from "./components/TechNavbar";
 import TechFooter from "./components/TechFooter";
-import TechHome from "./pages/TechHome";
 
-// Saare pages properly import kar liye gaye hain ✅
-import TechIndustry from "./pages/TechIndustry";
-import TechServices from "./pages/TechServices";
-import TechInsights from "./pages/TechInsights";
-import TechAbout from "./pages/TechAbout";
-// import TechContact from "./pages/TechContact"; // <-- NAYA CONTACT PAGE IMPORT KIYA HAI
+// VERCEL FIX: "pages" ki jagah "Pages" (Capital P) use kiya hai ✅
+import TechHome from "./Pages/TechHome";
+import TechIndustry from "./Pages/TechIndustry";
+import TechServices from "./Pages/TechServices";
+import TechInsights from "./Pages/TechInsights";
+import TechAbout from "./Pages/TechAbout";
 
 interface SadevTechProps {
   onNavigate: (view: "gateway" | "infra" | "tech") => void;
 }
 
-// URL routes (Yahan "contact" add kar diya gaya hai)
-type TechPage = "overview" | "industry" | "services" | "insights" | "about-us" | "contact";
-const VALID_PAGES: TechPage[] = ["overview", "industry", "services", "insights", "about-us", "contact"];
+// URL routes (Contact hata diya gaya hai kyunki ab direct WhatsApp use ho raha hai)
+type TechPage = "overview" | "industry" | "services" | "insights" | "about-us";
+const VALID_PAGES: TechPage[] = ["overview", "industry", "services", "insights", "about-us"];
 
 export default function SadevTech({ onNavigate }: SadevTechProps) {
   
@@ -65,8 +64,6 @@ export default function SadevTech({ onNavigate }: SadevTechProps) {
     switch (currentPage) {
       case "overview":
         return <TechHome />;
-      
-      // JAB NAVBAR PAR CLICK HOGA TOH YE PAGES RENDER HONGE ✅
       case "industry":
         return <TechIndustry />;
       case "services":
@@ -75,11 +72,8 @@ export default function SadevTech({ onNavigate }: SadevTechProps) {
          return <TechInsights />;
       case "about-us":
         return <TechAbout />;
-      // case "contact":
-      //   return <TechContact />; // <-- CONTACT PAGE RENDER KARNE KA LOGIC
-
       default:
-        // Coming Soon Screen naye sections ke liye (jo abhi nahi bane)
+        // Coming Soon Screen naye sections ke liye
         return (
           <div className="w-full min-h-[70vh] flex flex-col items-center justify-center bg-[#F4F6F8] pt-24 pb-12 px-6">
             <div className="w-16 h-16 bg-[#002D62] text-white flex items-center justify-center font-heading font-bold text-3xl rounded-sm mb-6 shadow-md">
