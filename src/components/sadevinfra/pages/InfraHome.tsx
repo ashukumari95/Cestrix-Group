@@ -33,25 +33,25 @@ interface InfraHomeProps {
 
 const heroSlides = [
   {
-    image: "./public/image14.png",
+    image: "/image14.png",
     tag: "National Infrastructure",
     title: "ENGINEERING \n NATIONAL LEGACIES.",
     desc: "Deploying fully capitalized heavy machinery to execute sovereign mandates across high-altitude corridors and strategic national gateways."
   },
   {
-    image: "./public/image15.png",
+    image: "/image15.png",
     tag: "Aviation & Terminal Hubs",
     title: "DESIGNING GLOBAL \n AEROTROPOLISES.",
     desc: "Executing greenfield international airports with high-tolerance runway paving and massive steel-truss terminals for unprecedented passenger volumes."
   },
   {
-    image: "./public/image16.png",
+    image: "/image16.png",
     tag: "Marine & Deepwater Ports",
     title: "MASTERING THE \n DEEPWATER FRONTIER.",
     desc: "Utilizing internal barge-mounted hydraulic piling rigs to construct weather-resilient cargo berths and anti-corrosive marine structures."
   },
   {
-    image: "./public/image13.png",
+    image: "/image13.png",
     tag: "Energy & Industrial Assets",
     title: "POWERING THE \n INDUSTRIAL GRID.",
     desc: "Bridging architectural vision with structural certainty across massive oil & gas refineries, hydroelectric grids, and critical energy corridors."
@@ -119,7 +119,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
               <span>Inspect Portfolio</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1.5" />
             </button>
-            <button onClick={() => openVideoModal("./public/video.mp4", "SADEV CORPORATE FILM")} className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-[#004B87] text-xs font-bold uppercase tracking-widest transition-all duration-500">
+            <button onClick={() => openVideoModal("/video.mp4", "SADEV CORPORATE FILM")} className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-[#004B87] text-xs font-bold uppercase tracking-widest transition-all duration-500">
               <Play className="w-3 h-3 fill-current" />
               <span>Watch Film</span>
             </button>
@@ -161,7 +161,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="lg:col-span-5 flex flex-col items-center lg:items-start">
             <div className="w-full max-w-[380px] aspect-[3/4] relative p-4 bg-white border border-slate-200 shadow-lg overflow-hidden">
               <div className="relative w-full h-full overflow-hidden">
-                <img src="./public/owner.png" alt="Chairman" className="absolute inset-0 w-full h-full object-cover object-top brightness-95" />
+                <img src="/owner.png" alt="Chairman" className="absolute inset-0 w-full h-full object-cover object-top brightness-95" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-[#0A192F] text-white p-6 hidden md:block shadow-xl z-10">
                 <span className="text-[10px] font-bold tracking-widest block uppercase mb-1 text-[#4CA6FF]">FOUNDER</span>
@@ -224,7 +224,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
           <div className="space-y-24">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 relative w-full h-[350px] md:h-[450px] shadow-lg rounded-sm overflow-hidden group">
-                <img src="./public/image8.png" alt="Aviation" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
+                <img src="/image8.png" alt="Aviation" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
                 <div className="absolute bottom-0 left-0 bg-[#0A192F] text-white p-5 flex items-center gap-4 shadow-md z-10">
                   <Plane className="w-6 h-6 text-[#4CA6FF]" />
                   <span className="text-xs font-bold tracking-widest uppercase">Aviation & Aerotropolis</span>
@@ -256,7 +256,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
                 </ul>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 order-1 lg:order-2 relative w-full h-[350px] md:h-[450px] shadow-lg rounded-sm overflow-hidden group">
-                <img src="./public/image9.png" alt="Marine" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
+                <img src="/image9.png" alt="Marine" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
                 <div className="absolute bottom-0 right-0 bg-[#0A192F] text-white p-5 flex items-center gap-4 shadow-md z-10">
                   <span className="text-xs font-bold tracking-widest uppercase">Maritime Engineering</span>
                   <Anchor className="w-6 h-6 text-[#4CA6FF]" />
@@ -266,7 +266,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 relative w-full h-[350px] md:h-[450px] shadow-lg rounded-sm overflow-hidden group">
-                <img src="./public/image10.png" alt="Defense Infrastructure" className="absolute inset-0 w-full h-full object-cover object-center grayscale-[30%] group-hover:scale-105 transition-transform duration-1000" />
+                <img src="/image10.png" alt="Defense Infrastructure" className="absolute inset-0 w-full h-full object-cover object-center grayscale-[30%] group-hover:scale-105 transition-transform duration-1000" />
                 <div className="absolute bottom-0 left-0 bg-[#0A192F] text-white p-5 flex items-center gap-4 shadow-md z-10">
                   <Shield className="w-6 h-6 text-[#4CA6FF]" />
                   <span className="text-xs font-bold tracking-widest uppercase">Strategic Defense Infrastructure</span>
@@ -298,7 +298,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
                 </ul>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 order-1 lg:order-2 relative w-full h-[350px] md:h-[450px] shadow-lg rounded-sm overflow-hidden group">
-                <img src="./public/image11.png" alt="Water Grids" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
+                <img src="/image11.png" alt="Water Grids" className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000" />
                 <div className="absolute bottom-0 right-0 bg-[#0A192F] text-white p-5 flex items-center gap-4 shadow-md z-10">
                   <span className="text-xs font-bold tracking-widest uppercase">Water Infrastructure</span>
                   <Droplets className="w-6 h-6 text-[#4CA6FF]" />
@@ -337,7 +337,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
             </div>
           </div>
           <div className="relative w-full h-[400px] md:h-[600px] shadow-2xl rounded-sm overflow-hidden">
-             <img src="./public/image12.png" alt="Quality Assurance on Site" className="absolute inset-0 w-full h-full object-cover object-center" />
+             <img src="/image12.png" alt="Quality Assurance on Site" className="absolute inset-0 w-full h-full object-cover object-center" />
              <div className="absolute bottom-0 left-0 right-0 p-8 bg-[#0A192F]/95 backdrop-blur-md text-white z-10">
                <span className="text-[10px] font-bold text-[#4CA6FF] uppercase tracking-widest block mb-2">ON-SITE QUALITY CONTROL</span>
                <p className="text-sm font-medium leading-relaxed">Relentless material stress monitoring and execution audits conducted at every mega-project site.</p>

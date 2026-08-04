@@ -20,31 +20,31 @@ export default function TechHome() {
       num: "01",
       title: "Heavy Civil Engineering ERP.",
       desc: "Software built for mega construction, bridges, and concrete structures. Manage materials, contractor bills, and site progress in real-time.",
-      img: "./public/image38.png" 
+      img: "/image38.png" 
     },
     {
       num: "02",
       title: "Applied Industrial Intelligence.",
       desc: "Deploy AI algorithms to analyze volumetric data, manage contract summary risks, and automate site safety audits.",
-      img: "./public/image39.png" 
+      img: "/image39.png" 
     },
     {
       num: "03",
       title: "Global Network Infrastructure.",
       desc: "Seamlessly connect and manage geographically dispersed projects, airports, ports, and transit networks with our IoT architecture.",
-      img: "./public/image40.png" 
+      img: "/image40.png" 
     },
     {
       num: "04",
       title: "Mission Critical Data Systems.",
       desc: "Robust server-side software powering national energy grids, deepwater port telemetry, and linear transport assets.",
-      img: "./public/image41.png" 
+      img: "/image41.png" 
     },
     {
       num: "05",
       title: "Sovereign Cyber Defense.",
       desc: "Protect critical national infrastructure. We engineer air-gapped, zero-trust digital walls to defend sovereign data against threats.",
-      img: "./public/image42.png" 
+      img: "/image42.png" 
     }
   ];
 
@@ -246,7 +246,7 @@ export default function TechHome() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div onClick={() => navigateTo('industry')} className="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 relative h-72">
-              <img src="./public/image43.png" alt="Construction" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image43.png" alt="Construction" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-[#001730]/40 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <Building2 className="w-6 h-6 text-[#00A3E0] mb-3" />
@@ -256,7 +256,7 @@ export default function TechHome() {
             </div>
 
             <div onClick={() => navigateTo('industry')} className="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 relative h-72">
-              <img src="./public/image44.png" alt="Aviation" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image44.png" alt="Aviation" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-[#001730]/40 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <Plane className="w-6 h-6 text-[#00A3E0] mb-3" />
@@ -266,7 +266,7 @@ export default function TechHome() {
             </div>
 
             <div onClick={() => navigateTo('industry')} className="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 relative h-72">
-              <img src="./public/image45.png" alt="Marine" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image45.png" alt="Marine" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-[#001730]/40 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <Ship className="w-6 h-6 text-[#00A3E0] mb-3" />
@@ -276,7 +276,7 @@ export default function TechHome() {
             </div>
 
             <div onClick={() => navigateTo('industry')} className="group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 relative h-72">
-              <img src="./public/image46.png" alt="Energy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image46.png" alt="Energy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-[#001730]/40 to-transparent"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <Zap className="w-6 h-6 text-[#00A3E0] mb-3" />
@@ -390,7 +390,7 @@ export default function TechHome() {
           <div className="md:w-1/2 w-full">
             <div className="relative h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl">
               {/* Changed image to a high-tech corporate engineering/tech team */}
-              <img src="./public/image47.png" alt="Engineering Excellence DNA" className="w-full h-full object-cover" />
+              <img src="/image47.png" alt="Engineering Excellence DNA" className="w-full h-full object-cover" />
             </div>
           </div>
 

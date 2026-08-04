@@ -35,7 +35,7 @@ export default function InfraSustainability() {
           animate={{ scale: 1 }}
           transition={{ duration: 20, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center opacity-60 grayscale-[10%]"
-          style={{ backgroundImage: "url('./public/ESG.png')" }}
+          style={{ backgroundImage: "url('/ESG.png')" }}
         />
         {/* Gradient Transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#FAFAFA]" />
@@ -89,7 +89,7 @@ export default function InfraSustainability() {
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-16 items-center">
           
           <div className="w-full lg:w-1/2 relative h-[450px] shadow-xl rounded-sm overflow-hidden group">
-            <img src="./public/ESG.png" alt="Environmental" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
+            <img src="/ESG.png" alt="Environmental" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
             <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md text-[#004B87] p-4 rounded-sm shadow-md">
                <Leaf className="w-8 h-8" />
             </div>
@@ -127,7 +127,7 @@ export default function InfraSustainability() {
         <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row-reverse gap-16 items-center">
           
           <div className="w-full lg:w-1/2 relative h-[450px] shadow-xl rounded-sm overflow-hidden group">
-            <img src="./public/image36.png" alt="Social Safety" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
+            <img src="/image36.png" alt="Social Safety" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
             <div className="absolute top-6 right-6 bg-[#004B87] text-white p-4 rounded-sm shadow-md">
                <HardHat className="w-8 h-8" />
             </div>
@@ -228,7 +228,7 @@ export default function InfraSustainability() {
           </div>
 
           <div className="w-full lg:w-1/2 relative h-[450px] shadow-xl rounded-sm overflow-hidden group">
-            <img src="./public/image37.png" alt="Governance & Data" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
+            <img src="/image37.png" alt="Governance & Data" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000" />
             <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md text-[#004B87] p-4 rounded-sm shadow-md">
                <Globe2 className="w-8 h-8" />
             </div>

@@ -77,7 +77,7 @@ export default function InfraTender() {
           animate={{ scale: 1 }}
           transition={{ duration: 20, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center opacity-50 grayscale-[10%]"
-          style={{ backgroundImage: "url('./public/PWU.png')" }}
+          style={{ backgroundImage: "url('/PWU.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/80 via-black/40 to-[#FAFAFA]" />
         

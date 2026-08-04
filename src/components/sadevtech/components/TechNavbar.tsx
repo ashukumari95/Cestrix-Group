@@ -85,7 +85,7 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
           {/* LOGO + SADEV TECH TEXT */}
           <a href="#overview" onClick={(e) => handlePageChange(e, 'overview')} className="flex items-center gap-3 cursor-pointer select-none outline-none">
             <img 
-              src="./public/logo.png" 
+              src="/logo.png" 
               alt="Sadev Logo" 
               className="h-10 md:h-11 w-auto object-contain"
               onError={(e) => {

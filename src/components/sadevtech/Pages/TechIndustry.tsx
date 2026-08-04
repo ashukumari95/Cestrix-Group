@@ -28,7 +28,7 @@ export default function TechIndustry() {
         "Catch design errors before actual construction"
       ],
       impact: "Save 30% on material costs",
-      img: "./public/image43.png"
+      img: "/image43.png"
     },
     {
       id: "transport",
@@ -44,7 +44,7 @@ export default function TechIndustry() {
         "Maintenance alerts for railway tracks"
       ],
       impact: "Save 22% on fuel and maintenance",
-      img: "./public/image44.png"
+      img: "/image44.png"
     },
     {
       id: "marine",
@@ -60,7 +60,7 @@ export default function TechIndustry() {
         "Temperature tracking for sensitive cargo"
       ],
       impact: "Load containers 40% faster",
-      img: "./public/image45.png"
+      img: "/image45.png"
     },
     {
       id: "energy",
@@ -76,7 +76,7 @@ export default function TechIndustry() {
         "Secure networks against hackers"
       ],
       impact: "Zero sudden power cuts",
-      img: "./public/image46.png"
+      img: "/image46.png"
     },
     {
       id: "defense",
@@ -92,7 +92,7 @@ export default function TechIndustry() {
         "Strict compliance with global laws"
       ],
       impact: "100% safe and secure data",
-      img: "./public/image10.png"
+      img: "/image10.png"
     }
   ];
 
@@ -116,7 +116,7 @@ export default function TechIndustry() {
         {/* Background Image Setup */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="./public/image38.png" 
+            src="/image38.png" 
             alt="Sadev Tech Real World Software" 
             className="w-full h-full object-cover opacity-90"
           />

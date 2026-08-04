@@ -138,7 +138,7 @@ export default function TechFooter({ onNavigate }: TechFooterProps) {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
             <div className="space-y-6 lg:col-span-2 pr-8">
                <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigateTo('overview')}>
-                  <img src="./public/logo.png" alt="Sadev Tech Logo" className="h-10 w-auto object-contain brightness-0 invert" onError={(e) => { (e.target as HTMLElement).style.display = "none"; }} />
+                  <img src="/logo.png" alt="Sadev Tech Logo" className="h-10 w-auto object-contain brightness-0 invert" onError={(e) => { (e.target as HTMLElement).style.display = "none"; }} />
                   <span className="text-xl font-bold tracking-[0.1em] font-heading uppercase text-white">SADEV <span className="font-light text-slate-400">TECH</span></span>
                </div>
                <p className="text-sm text-slate-300 font-light leading-relaxed max-w-sm">

@@ -24,37 +24,37 @@ const FLEET_CATEGORIES = [
   {
     title: "Earthmoving & Excavation",
     desc: "Over 200+ heavy-duty hydraulic excavators, dozers, and articulated dump trucks designed for massive land leveling and deep-trench excavations.",
-    image: "./public/image26.png",
+    image: "/image26.png",
     features: ["50-Ton Class Excavators", "GPS-Guided Motor Graders", "High-Capacity Wheel Loaders"]
   },
   {
     title: "Lifting & Material Handling",
     desc: "A formidable array of heavy-lift crawler cranes, tower cranes, and offshore barge-mounted rigs capable of hoisting multi-ton steel segments.",
-    image: "./public/image27.png",
+    image: "/image27.png",
     features: ["600-Ton Crawler Cranes", "High-Altitude Tower Cranes", "Hydraulic Gantry Launchers"]
   },
   {
     title: "Concrete & Paving",
     desc: "100% owned automated batching plants and sensor-guided concrete slip-form pavers ensuring seamless runway and expressway construction.",
-    image: "./public/image28.png",
+    image: "/image28.png",
     features: ["Automated Batching Plants", "Slip-form Concrete Pavers", "Fleet of Transit Mixers"]
   },
   {
     title: "Specialized Tunneling (TBM)",
     desc: "Advanced Tunnel Boring Machines engineered for hostile sub-surface environments, cutting through solid Himalayan rock formations.",
-    image: "./public/image29.png",
+    image: "/image29.png",
     features: ["Hard Rock TBMs", "Earth Pressure Balance Shields", "Automated Grouting"]
   },
   {
     title: "Heavy Haulage & Logistics",
     desc: "A massive logistics wing featuring Self-Propelled Modular Transporters (SPMTs) to move ultra-heavy refinery reactors and bridge spans.",
-    image: "./public/image30.png",
+    image: "/image30.png",
     features: ["Multi-Axle SPMTs", "Low-Bed Heavy Trailers", "Escort & Pilot Fleet"]
   },
   {
     title: "Marine & Deepwater Rigs",
     desc: "Floating assets designed for harbor expansion, including cutter-suction dredgers and jack-up barges equipped with heavy rotary piling rigs.",
-    image: "./public/image31.png",
+    image: "/image31.png",
     features: ["Jack-Up Piling Barges", "Cutter-Suction Dredgers", "Floating Concrete Plants"]
   }
 ];
@@ -72,7 +72,7 @@ export default function InfraFleet() {
           animate={{ scale: 1 }}
           transition={{ duration: 20, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center opacity-50 grayscale-[20%]"
-          style={{ backgroundImage: "url('./public/Capabilities.jpg')" }}
+          style={{ backgroundImage: "url('/Capabilities.jpg')" }}
         />
         {/* Gradient Transition */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#FAFAFA]" />
@@ -179,7 +179,7 @@ export default function InfraFleet() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           <div className="order-2 lg:order-1 relative h-[450px] shadow-xl rounded-sm overflow-hidden group">
-            <img src="./public/image32.png" alt="Training Simulator" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
+            <img src="/image32.png" alt="Training Simulator" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 shadow-lg border-l-4 border-[#004B87]">
               <span className="text-[10px] font-bold text-[#004B87] uppercase tracking-widest block mb-2">VIRTUAL REALITY LAB</span>
               <p className="text-sm font-bold text-slate-800">Advanced 6-Axis Motion Simulators for Tower Crane Operations.</p>
@@ -255,7 +255,7 @@ export default function InfraFleet() {
           </div>
 
           <div className="relative h-[450px] md:h-[650px] rounded-sm overflow-hidden shadow-2xl border border-white/10">
-             <img src="./public/image33.png" alt="NOC Center" className="w-full h-full object-cover opacity-80" />
+             <img src="/image33.png" alt="NOC Center" className="w-full h-full object-cover opacity-80" />
              <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-[#0A192F]/20 to-transparent" />
              <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
                 <div>
@@ -308,7 +308,7 @@ export default function InfraFleet() {
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-16 items-center">
           
           <div className="w-full md:w-1/2 relative h-[400px] md:h-[500px] shadow-xl rounded-sm overflow-hidden group">
-            <img src="./public/image34.png" alt="Maintenance" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
+            <img src="/image34.png" alt="Maintenance" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute top-4 left-4 bg-[#004B87] text-white p-3 rounded-sm shadow-md">
                <Wrench className="w-6 h-6" />
             </div>

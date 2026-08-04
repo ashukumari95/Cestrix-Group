@@ -90,7 +90,7 @@ export default function TechServices() {
         <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row items-start gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="lg:w-1/2 w-full sticky top-40">
             <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200 group">
-              <img src="./public/image48.png" alt="ERP Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image48.png" alt="ERP Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002D62]/90 via-[#002D62]/20 to-transparent flex flex-col justify-end p-10">
                 <h3 className="text-white text-3xl font-bold font-heading mb-2 drop-shadow-md">Command Center ERP</h3>
                 <p className="text-slate-300 text-sm font-light">Unifying finances, supply chains, and site execution into a single pane of glass.</p>
@@ -137,7 +137,7 @@ export default function TechServices() {
         <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row-reverse items-start gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="lg:w-1/2 w-full sticky top-40">
             <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200 group">
-              <img src="./public/image49.png" alt="BIM Architecture" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image49.png" alt="BIM Architecture" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002D62]/90 via-[#002D62]/20 to-transparent flex flex-col justify-end p-10">
                 <h3 className="text-white text-3xl font-bold font-heading mb-2 drop-shadow-md">Spatial Intelligence</h3>
                 <p className="text-slate-300 text-sm font-light">Executing perfect structural alignment in the digital realm before physical deployment.</p>
@@ -187,7 +187,7 @@ export default function TechServices() {
         <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row items-start gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="lg:w-1/2 w-full sticky top-40">
             <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200 group">
-              <img src="./public/image50.png" alt="IoT Telematics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image50.png" alt="IoT Telematics" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002D62]/90 via-[#002D62]/20 to-transparent flex flex-col justify-end p-10">
                 <h3 className="text-white text-3xl font-bold font-heading mb-2 drop-shadow-md">Connected Operations</h3>
                 <p className="text-slate-300 text-sm font-light">Transforming silent physical assets into highly communicative data nodes.</p>
@@ -239,7 +239,7 @@ export default function TechServices() {
         <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row-reverse items-start gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="lg:w-1/2 w-full sticky top-40">
             <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200 group">
-              <img src="./public/image51.png" alt="Artificial Intelligence" className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image51.png" alt="Artificial Intelligence" className="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002D62]/90 via-[#002D62]/40 to-transparent flex flex-col justify-end p-10">
                 <div className="flex items-center gap-2 mb-2">
                   <Sparkles className="w-6 h-6 text-[#FFC000]" />
@@ -292,7 +292,7 @@ export default function TechServices() {
         <div className="max-w-[1300px] mx-auto flex flex-col lg:flex-row items-start gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp} className="lg:w-1/2 w-full sticky top-40">
             <div className="relative h-[500px] w-full rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(0,163,224,0.1)] border border-white/10 group">
-              <img src="./public/image52.png" alt="Cybersecurity" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image52.png" alt="Cybersecurity" className="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-transparent to-transparent"></div>
               
               <div className="absolute top-8 right-8 bg-[#001730]/80 backdrop-blur-md border border-[#00A3E0]/50 p-4 rounded-xl flex items-center gap-3">
