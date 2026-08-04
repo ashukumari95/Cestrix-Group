@@ -24,24 +24,22 @@ const VALID_PAGES: InfraPage[] = ["home", "projects", "fleet", "sustainability",
 
 export default function SadevInfra({ onNavigate }: SadevInfraProps) {
   
-  // 1. URL HASH LOGIC: Page load hote hi URL check karega
+  // 1. CLEAN URL LOGIC: Hash (#) hata kar Path check karega
   const [currentPage, setCurrentPage] = useState<InfraPage>(() => {
-    const hash = window.location.hash.replace("#", "") as InfraPage;
-    return VALID_PAGES.includes(hash) ? hash : "home";
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    const page = (pathParts[1] || "home") as InfraPage;
+    return VALID_PAGES.includes(page) ? page : "home";
   });
 
   const [showVideoModal, setShowVideoModal] = useState<boolean>(false);
   const [videoUrl, setVideoUrl] = useState<string>("");
   const [modalTitle, setModalTitle] = useState<string>("");
 
-  // 2. SYNC STATE TO URL (FIXED FOR HOME PAGE)
+  // 2. SYNC STATE TO CLEAN URL
   useEffect(() => {
-    if (currentPage === "home") {
-      // Agar Home page hai, toh URL se hash (#) hata do
-      window.history.pushState(null, "", window.location.pathname + window.location.search);
-    } else if (window.location.hash !== `#${currentPage}`) {
-      // Baaki pages ke liye hash add karo
-      window.history.pushState(null, "", `#${currentPage}`);
+    const newPath = currentPage === "home" ? "/infra" : `/infra/${currentPage}`;
+    if (window.location.pathname !== newPath) {
+      window.history.pushState(null, "", newPath);
     }
 
     // Scroll to top smoothly
@@ -53,19 +51,36 @@ export default function SadevInfra({ onNavigate }: SadevInfraProps) {
     }
   }, [currentPage]);
 
-  // 3. BROWSER BACK BUTTON FIX
+  // 3. BROWSER BACK BUTTON FIX FOR CLEAN URLS
   useEffect(() => {
     const handlePopState = () => {
-      const hash = window.location.hash.replace("#", "") as InfraPage;
-      if (VALID_PAGES.includes(hash)) {
-        setCurrentPage(hash);
-      } else {
-        setCurrentPage("home");
+      const pathParts = window.location.pathname.split("/").filter(Boolean);
+      if (pathParts[0] === "infra") {
+        const page = (pathParts[1] || "home") as InfraPage;
+        if (VALID_PAGES.includes(page)) {
+          setCurrentPage(page);
+        } else {
+          setCurrentPage("home");
+        }
       }
     };
 
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // 4. Custom Event Listener for Internal Links
+  useEffect(() => {
+    const handleCustomNav = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (VALID_PAGES.includes(customEvent.detail)) {
+        setCurrentPage(customEvent.detail);
+      } else if (customEvent.detail === 'home') {
+        setCurrentPage('home');
+      }
+    };
+    window.addEventListener("infra-navigate", handleCustomNav);
+    return () => window.removeEventListener("infra-navigate", handleCustomNav);
   }, []);
 
   const openVideoModal = (url: string, title: string) => {
@@ -109,20 +124,17 @@ export default function SadevInfra({ onNavigate }: SadevInfraProps) {
         onNavigate={onNavigate} 
       />
 
-      {/* MAIN VIEWPORT */}
+      {/* MAIN VIEWPORT (Fixed the blank screen bug by removing AnimatePresence) */}
       <main className="relative z-10 w-full flex-1 flex flex-col justify-start pt-[88px] md:pt-[104px]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentPage}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
-            className="w-full flex-1 flex flex-col"
-          >
-            {renderPage()}
-          </motion.div>
-        </AnimatePresence>
+        <motion.div
+          key={currentPage}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full flex-1 flex flex-col"
+        >
+          {renderPage()}
+        </motion.div>
       </main>
 
       {/* FOOTER */}

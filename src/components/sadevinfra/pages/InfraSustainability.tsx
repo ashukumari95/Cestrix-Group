@@ -14,12 +14,10 @@ import {
   Recycle, 
   HardHat, 
   Users, 
-  Award,
   Scale,
   FileCheck,
   ArrowRight,
-  Activity, // <-- FIXED: Added Activity icon
-  Trophy    // <-- FIXED: Added Trophy icon
+  Activity
 } from "lucide-react";
 
 export default function InfraSustainability() {
@@ -237,30 +235,7 @@ export default function InfraSustainability() {
         </div>
       </section>
 
-      {/* 8. CERTIFICATIONS & ACCOLADES */}
-      <section className="w-full py-24 px-6 md:px-12 bg-slate-50 border-b border-slate-200">
-        <div className="max-w-[1400px] mx-auto text-center">
-          <div className="mb-16">
-            <Trophy className="w-10 h-10 text-[#004B87] mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase tracking-tight font-heading">
-              Global Certifications
-            </h2>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-             {["ISO 14001:2015", "ISO 45001:2018", "ISO 9001:2015", "LEED Platinum Member"].map((cert, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-3">
-                  <div className="w-20 h-20 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-sm">
-                    <Award className="w-8 h-8 text-[#004B87]" />
-                  </div>
-                  <span className="text-xs font-bold text-slate-700 tracking-widest uppercase">{cert}</span>
-                </div>
-             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. BOTTOM CTA */}
+      {/* 8. BOTTOM CTA */}
       <section className="w-full py-32 px-6 md:px-12 bg-[#004B87] flex justify-center text-center text-white">
         <div className="max-w-3xl w-full space-y-8">
           <span className="text-[10px] font-bold text-[#4CA6FF] tracking-[0.4em] font-heading uppercase block">

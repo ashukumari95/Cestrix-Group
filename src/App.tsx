@@ -17,8 +17,38 @@ import SadevTech from "./components/sadevtech/SadevTech";
 type AppView = "gateway" | "infra" | "tech";
 
 export default function App() {
-  const [view, setView] = useState<AppView>("gateway");
+  
+  // 1. URL check karke pehla page decide karna
+  const [view, setView] = useState<AppView>(() => {
+    const path = window.location.pathname;
+    if (path.startsWith("/infra")) return "infra";
+    if (path.startsWith("/tech")) return "tech";
+    return "gateway";
+  });
+
   const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
+
+  // 2. Naya Navigation function jo URL bhi update karega
+  const handleNavigate = (targetView: AppView) => {
+    let newPath = "/";
+    if (targetView === "infra") newPath = "/infra";
+    if (targetView === "tech") newPath = "/tech";
+    
+    window.history.pushState(null, "", newPath);
+    setView(targetView);
+  };
+
+  // 3. Browser ke Back/Forward button ko zinda (active) karna
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      if (path.startsWith("/infra")) setView("infra");
+      else if (path.startsWith("/tech")) setView("tech");
+      else setView("gateway");
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,7 +77,7 @@ export default function App() {
       <AnimatePresence mode="wait">
         
         {/* =========================================================
-            PORTAL GATEWAY VIEW (CINEMATIC SPLIT SCREEN RESTORED)
+            PORTAL GATEWAY VIEW 
         ========================================================= */}
         {view === "gateway" && (
           <motion.div
@@ -58,20 +88,17 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="w-full h-full flex flex-col justify-between"
           >
-            {/* 1. CENTER CORPORATE LOGO (Floating Box) */}
             <header className="absolute top-8 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-md px-8 py-4 shadow-2xl border border-slate-200 flex items-center gap-4 transition-all duration-700 rounded-sm">
               <img 
                 src="/logo.png" 
                 alt="Sadev Group" 
                 className="h-10 w-auto object-contain"
               />
-              {/* UPDATED: "SADEV" color changed to deep dark navy to match the logo */}
               <span className="text-2xl font-bold tracking-[0.2em] font-heading text-[#0A192F] uppercase whitespace-nowrap leading-none mt-1">
                 SADEV <span className="font-light text-slate-500">GROUP</span>
               </span>
             </header>
 
-            {/* 2. Main Split HERO Section */}
             <main className="relative flex flex-col md:flex-row w-full h-full flex-1">
 
               {/* --- LEFT SIDE: PHYSICAL INFRASTRUCTURE --- */}
@@ -82,7 +109,7 @@ export default function App() {
                 style={{
                   flex: hoveredSide === "left" ? 1.4 : hoveredSide === "right" ? 0.6 : 1
                 }}
-                onClick={() => setView("infra")}
+                onClick={() => handleNavigate("infra")}
               >
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
@@ -91,7 +118,6 @@ export default function App() {
                     transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)"
                   }}
                 />
-                
                 <div className={`absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/30 transition-colors duration-700 ${hoveredSide === "left" ? "bg-white/60" : ""}`} />
 
                 <div className="relative z-10 w-full max-w-2xl px-8 py-12 md:p-16 lg:p-24 text-left flex flex-col justify-end h-full mt-10 md:mt-0">
@@ -133,7 +159,7 @@ export default function App() {
                 style={{
                   flex: hoveredSide === "right" ? 1.4 : hoveredSide === "left" ? 0.6 : 1
                 }}
-                onClick={() => setView("tech")}
+                onClick={() => handleNavigate("tech")}
               >
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
@@ -142,7 +168,6 @@ export default function App() {
                     transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)"
                   }}
                 />
-
                 <div className={`absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#004B87]/80 to-[#0A192F]/60 transition-colors duration-700 ${hoveredSide === "right" ? "bg-[#0A192F]/70" : ""}`} />
 
                 <div className="relative z-10 w-full max-w-2xl px-8 py-12 md:p-16 lg:p-24 text-left flex flex-col justify-end h-full mt-10 md:mt-0">
@@ -166,7 +191,6 @@ export default function App() {
                   </motion.p>
 
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
-                    {/* UPDATED: Button text changed to 'Enter Sadev Tech' */}
                     <button
                       className={`inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#4CA6FF] hover:border-[#4CA6FF] hover:text-[#0A192F] transition-all duration-300 ${hoveredSide === "right" ? "pr-6" : ""}`}
                     >
@@ -179,9 +203,8 @@ export default function App() {
 
             </main>
 
-            {/* 3. Corporate Footer */}
             <footer className="w-full py-5 px-6 md:px-12 font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0A192F] z-50 relative shadow-[0_-10px_30px_rgba(0,0,0,0.3)] border-t border-white/10">
-              <span className="text-center md:text-left">© 2026 Sadev Group. All rights reserved.</span>
+              <span className="text-center md:text-left">© {new Date().getFullYear()} Sadev Group. All rights reserved.</span>
               <span className="text-center md:text-right hover:text-[#4CA6FF] transition-colors cursor-pointer font-bold text-white">Corporate Governance</span>
             </footer>
           </motion.div>
@@ -190,13 +213,13 @@ export default function App() {
         {/* --- ROUTES --- */}
         {view === "infra" && (
           <motion.div key="infra-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
-            <SadevInfra onNavigate={(targetView) => setView(targetView)} />
+            <SadevInfra onNavigate={handleNavigate} />
           </motion.div>
         )}
 
         {view === "tech" && (
           <motion.div key="tech-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
-            <SadevTech onNavigate={(targetView) => setView(targetView)} />
+            <SadevTech onNavigate={handleNavigate} />
           </motion.div>
         )}
 
