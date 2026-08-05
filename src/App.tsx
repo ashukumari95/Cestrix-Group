@@ -66,20 +66,10 @@ export default function App() {
         }`}
       >
         
-      {/* 🔥 MOBILE PERFORMANCE FIX: SMART RESPONSIVE CSS BACKGROUNDS */}
+      {/* FONTS ONLY (Removed complex media queries) */}
       <style dangerouslySetInnerHTML={{__html: `
         .font-body { font-family: 'Inter', sans-serif; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
-
-        /* Mobile First: Loads 800px image */
-        .bg-infra-hero { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=800'); }
-        .bg-tech-hero { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=800'); }
-
-        /* Desktop: Upgrades to 1600px image */
-        @media (min-width: 768px) {
-          .bg-infra-hero { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=1600'); }
-          .bg-tech-hero { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=1600'); }
-        }
       `}} />
 
       <AnimatePresence mode="wait">
@@ -116,9 +106,13 @@ export default function App() {
                 style={{ flex: hoveredSide === "left" ? 1.4 : hoveredSide === "right" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("infra")}
               >
+                {/* 🔥 GOLDEN RATIO BACKGROUND */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%] bg-infra-hero"
-                  style={{ transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
+                  style={{ 
+                    backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=50&fm=webp&w=1200')",
+                    transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" 
+                  }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/30 transition-colors duration-700 ${hoveredSide === "left" ? "bg-white/60" : ""}`} />
 
@@ -159,9 +153,13 @@ export default function App() {
                 style={{ flex: hoveredSide === "right" ? 1.4 : hoveredSide === "left" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("tech")}
               >
+                {/* 🔥 GOLDEN RATIO BACKGROUND */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out bg-tech-hero"
-                  style={{ transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
+                  style={{ 
+                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=50&fm=webp&w=1200')",
+                    transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" 
+                  }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#004B87]/80 to-[#0A192F]/60 transition-colors duration-700 ${hoveredSide === "right" ? "bg-[#0A192F]/70" : ""}`} />
 
