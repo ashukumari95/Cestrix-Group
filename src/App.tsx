@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   HardHat, 
@@ -11,14 +11,16 @@ import {
   ArrowRight
 } from "lucide-react";
 import { HelmetProvider } from "react-helmet-async";
-import SadevInfra from "./components/sadevinfra/SadevInfra";
-import SadevTech from "./components/sadevtech/SadevTech";
+
+// 🔥 PERFORMANCE FIX 1: LAZY LOADING (Code Splitting)
+// Ab Infra aur Tech ka code tabhi load hoga jab user un button par click karega!
+const SadevInfra = lazy(() => import("./components/sadevinfra/SadevInfra"));
+const SadevTech = lazy(() => import("./components/sadevtech/SadevTech"));
 
 type AppView = "gateway" | "infra" | "tech";
 
 export default function App() {
   
-  // 1. URL check karke pehla page decide karna
   const [view, setView] = useState<AppView>(() => {
     const path = window.location.pathname;
     if (path.startsWith("/infra")) return "infra";
@@ -28,7 +30,6 @@ export default function App() {
 
   const [hoveredSide, setHoveredSide] = useState<"left" | "right" | null>(null);
 
-  // 2. Naya Navigation function jo URL bhi update karega
   const handleNavigate = (targetView: AppView) => {
     let newPath = "/";
     if (targetView === "infra") newPath = "/infra";
@@ -38,7 +39,6 @@ export default function App() {
     setView(targetView);
   };
 
-  // 3. Browser ke Back/Forward button ko zinda (active) karna
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname;
@@ -67,7 +67,6 @@ export default function App() {
         }`}
       >
         
-      {/* GLOBAL FONTS */}
       <style dangerouslySetInnerHTML={{__html: `
         .font-body { font-family: 'Inter', sans-serif; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
@@ -88,9 +87,12 @@ export default function App() {
             className="w-full h-full flex flex-col justify-between"
           >
             <header className="absolute top-8 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-md px-8 py-4 shadow-2xl border border-slate-200 flex items-center gap-4 transition-all duration-700 rounded-sm">
+              {/* 🔥 PERFORMANCE FIX 2: Added Explicit Width & Height */}
               <img 
                 src="/logo.png" 
                 alt="Sadev Group" 
+                width="200"
+                height="50"
                 className="h-10 w-auto object-contain"
               />
               <span className="text-2xl font-bold tracking-[0.2em] font-heading text-[#0A192F] uppercase whitespace-nowrap leading-none mt-1">
@@ -99,21 +101,17 @@ export default function App() {
             </header>
 
             <main className="relative flex flex-col md:flex-row w-full h-full flex-1">
-
-              {/* --- LEFT SIDE: PHYSICAL INFRASTRUCTURE --- */}
+              {/* --- LEFT SIDE --- */}
               <div 
                 onMouseEnter={() => setHoveredSide("left")}
                 onMouseLeave={() => setHoveredSide(null)}
                 className="relative flex items-center justify-center h-1/2 md:h-full overflow-hidden transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] group cursor-pointer"
-                style={{
-                  flex: hoveredSide === "left" ? 1.4 : hoveredSide === "right" ? 0.6 : 1
-                }}
+                style={{ flex: hoveredSide === "left" ? 1.4 : hoveredSide === "right" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("infra")}
               >
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
                   style={{ 
-                    // PERFORMANCE FIX: Added fm=webp and reduced width to 1600
                     backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=1600')",
                     transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)"
                   }}
@@ -141,9 +139,7 @@ export default function App() {
                   </motion.p>
 
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
-                    <button
-                      className={`inline-flex items-center gap-3 bg-[#004B87] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-slate-900 transition-all duration-300 shadow-lg ${hoveredSide === "left" ? "pr-6" : ""}`}
-                    >
+                    <button className={`inline-flex items-center gap-3 bg-[#004B87] text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-slate-900 transition-all duration-300 shadow-lg ${hoveredSide === "left" ? "pr-6" : ""}`}>
                       <span>Enter Infrastructure</span>
                       <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${hoveredSide === "left" ? "translate-x-2" : ""}`} />
                     </button>
@@ -151,20 +147,17 @@ export default function App() {
                 </div>
               </div>
 
-              {/* --- RIGHT SIDE: DIGITAL ECOSYSTEM --- */}
+              {/* --- RIGHT SIDE --- */}
               <div 
                 onMouseEnter={() => setHoveredSide("right")}
                 onMouseLeave={() => setHoveredSide(null)}
                 className="relative flex items-center justify-center h-1/2 md:h-full overflow-hidden transition-all duration-[1000ms] ease-[cubic-bezier(0.25,0.1,0.25,1)] group cursor-pointer border-t md:border-t-0 md:border-l border-white/10"
-                style={{
-                  flex: hoveredSide === "right" ? 1.4 : hoveredSide === "left" ? 0.6 : 1
-                }}
+                style={{ flex: hoveredSide === "right" ? 1.4 : hoveredSide === "left" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("tech")}
               >
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
                   style={{ 
-                    // PERFORMANCE FIX: Added fm=webp and reduced width to 1600
                     backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=1600')",
                     transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)"
                   }}
@@ -192,19 +185,15 @@ export default function App() {
                   </motion.p>
 
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
-                    <button
-                      className={`inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#4CA6FF] hover:border-[#4CA6FF] hover:text-[#0A192F] transition-all duration-300 ${hoveredSide === "right" ? "pr-6" : ""}`}
-                    >
+                    <button className={`inline-flex items-center gap-3 bg-transparent border border-white/30 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-[#4CA6FF] hover:border-[#4CA6FF] hover:text-[#0A192F] transition-all duration-300 ${hoveredSide === "right" ? "pr-6" : ""}`}>
                       <span>Enter Sadev Tech</span>
                       <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${hoveredSide === "right" ? "translate-x-2" : ""}`} />
                     </button>
                   </motion.div>
                 </div>
               </div>
-
             </main>
 
-            {/* 3. Corporate Footer */}
             <footer className="w-full py-5 px-6 md:px-12 font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0A192F] z-50 relative shadow-[0_-10px_30px_rgba(0,0,0,0.3)] border-t border-white/10">
               <span className="text-center md:text-left">© {new Date().getFullYear()} Sadev Group. All rights reserved.</span>
               <span className="text-center md:text-right hover:text-[#4CA6FF] transition-colors cursor-pointer font-bold text-white">Corporate Governance</span>
@@ -212,16 +201,20 @@ export default function App() {
           </motion.div>
         )}
 
-        {/* --- ROUTES --- */}
+        {/* --- ROUTES WITH SUSPENSE (LAZY LOADING) --- */}
         {view === "infra" && (
           <motion.div key="infra-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
-            <SadevInfra onNavigate={handleNavigate} />
+            <Suspense fallback={<div className="w-full h-screen bg-white flex items-center justify-center font-heading text-[#004B87] font-bold tracking-widest uppercase text-sm">Loading Infra...</div>}>
+              <SadevInfra onNavigate={handleNavigate} />
+            </Suspense>
           </motion.div>
         )}
 
         {view === "tech" && (
           <motion.div key="tech-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
-            <SadevTech onNavigate={handleNavigate} />
+            <Suspense fallback={<div className="w-full h-screen bg-[#F4F6F8] flex items-center justify-center font-heading text-[#002D62] font-bold tracking-widest uppercase text-sm">Loading Tech...</div>}>
+              <SadevTech onNavigate={handleNavigate} />
+            </Suspense>
           </motion.div>
         )}
 
