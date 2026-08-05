@@ -14,10 +14,7 @@ import {
 export default function TechHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // WhatsApp Link for Buttons
-  const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Sadev%20Tech,%20I%20would%20like%20to%20discuss%20an%20enterprise%20software%20project.";
-
-  // Wahi purani 5 Slides aapke content ke sath
+  // 5 Slides 
   const slides = [
     {
       num: "01",
@@ -70,12 +67,11 @@ export default function TechHome() {
     <div className="w-full bg-[#F8FAFC] text-slate-800 font-sans selection:bg-[#002D62] selection:text-white overflow-x-hidden pt-[76px] lg:pt-[88px]">
       
       {/* =========================================
-          1. FULL SCREEN HERO SLIDER (Fixed Delay)
+          1. FULL SCREEN HERO SLIDER (Watercolor Transparency & No Blur)
       ========================================= */}
       <section className="relative w-full h-[85vh] min-h-[600px] bg-gradient-to-br from-[#001730] via-[#002D62] to-[#00A3E0] overflow-hidden flex items-center">
         
-        {/* Yahan se mode="wait" hata diya hai taaki delay na aaye */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <motion.div 
             key={currentSlide}
             initial={{ opacity: 0 }}
@@ -118,7 +114,7 @@ export default function TechHome() {
             {/* TATA Style Button Area */}
             <div className="flex w-full mt-2">
               <button 
-                onClick={() => window.open(WHATSAPP_LINK, "_blank")} 
+                onClick={() => navigateTo('contact')} 
                 className="px-8 py-3.5 bg-white text-[#002D62] text-sm md:text-base font-semibold hover:bg-slate-100 transition-colors rounded-sm flex items-center gap-3 shadow-md w-fit"
               >
                 Connect with our specialists <ArrowRight className="w-5 h-5 text-[#002D62]" />
@@ -360,7 +356,7 @@ export default function TechHome() {
       </section>
 
       {/* =========================================
-          5. THE DNA PHILOSOPHY
+          5. THE DNA PHILOSOPHY (REWORDED TO ENGINEERING EXCELLENCE) ✅
       ========================================= */}
       <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#E1F0FF] text-[#002D62]">
         <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row gap-16 items-center">
@@ -393,6 +389,7 @@ export default function TechHome() {
 
           <div className="md:w-1/2 w-full">
             <div className="relative h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl">
+              {/* Changed image to a high-tech corporate engineering/tech team */}
               <img src="/image47.png" alt="Engineering Excellence DNA" className="w-full h-full object-cover" />
             </div>
           </div>
@@ -401,7 +398,7 @@ export default function TechHome() {
       </section>
 
       {/* =========================================
-          6. REALISTIC CLIENT TESTIMONIALS (UPDATED)
+          6. CLIENT TESTIMONIALS 
       ========================================= */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-24 bg-white border-y border-slate-200">
         <div className="max-w-[1300px] mx-auto">
@@ -412,30 +409,32 @@ export default function TechHome() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#F8FAFC] p-10 rounded-2xl border border-slate-200">
               <p className="text-slate-600 italic mb-8 leading-relaxed font-light">
-                "Sadev Tech's ERP is the first system we've used that truly understands the realities of a live construction site. Their offline-sync capability and automated material tracking helped us reduce material wastage by over 18% on our latest highway project."
+                "Sadev Tech's software actually understands how construction works. Their new ERP system saved us countless hours in material tracking and completely eliminated subcontractor billing fraud."
               </p>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-6">
                 <div className="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
-                  <img src="/image58.png" alt="Client" className="w-full h-full object-cover" />
+                  {/* PERFORMANCE FIX: Added fm=webp&q=60 */}
+                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=60&fm=webp&w=150" alt="Client" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#002D62] text-sm">Vikram Singhania</h4>
-                  <p className="text-[10px] uppercase tracking-widest text-[#00A3E0] mt-1">Chief Project Officer, National EPC</p>
+                  <h4 className="font-bold text-[#002D62] text-sm">Director of Infrastructure</h4>
+                  <p className="text-[10px] uppercase tracking-widest text-[#00A3E0] mt-1">National EPC Firm</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-[#F8FAFC] p-10 rounded-2xl border border-slate-200">
               <p className="text-slate-600 italic mb-8 leading-relaxed font-light">
-                "Migrating our legacy project data to Sadev's secure cloud architecture was seamless. Their engineering team didn't just deliver software; they provided a complete digital transformation strategy that our on-site engineers actually love using."
+                "The 5D Digital Twin simulation provided by their team for our new aviation hub allowed us to catch structural clashes before execution. It saved us millions in potential rework."
               </p>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-6">
                 <div className="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=150" alt="Client" className="w-full h-full object-cover" />
+                  {/* PERFORMANCE FIX: Added fm=webp&q=60 */}
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=60&fm=webp&w=150" alt="Client" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#002D62] text-sm">Ananya Sharma</h4>
-                  <p className="text-[10px] uppercase tracking-widest text-[#00A3E0] mt-1">VP of Technology, Global Infra</p>
+                  <h4 className="font-bold text-[#002D62] text-sm">VP of Operations</h4>
+                  <p className="text-[10px] uppercase tracking-widest text-[#00A3E0] mt-1">Global Aviation Authority</p>
                 </div>
               </div>
             </div>
@@ -452,7 +451,7 @@ export default function TechHome() {
           <p className="text-slate-300 text-sm md:text-base font-light leading-relaxed">
             Whether you need custom ERP software to digitize your operations today, or are a visionary seeking to solve the problems of tomorrow—your journey starts here.
           </p>
-          <button onClick={() => window.open(WHATSAPP_LINK, "_blank")} className="mt-4 px-10 py-4 bg-white text-[#002D62] text-xs font-bold uppercase tracking-widest hover:bg-[#00A3E0] hover:text-white transition-colors rounded-full shadow-xl inline-flex items-center gap-2">
+          <button onClick={() => navigateTo('contact')} className="mt-4 px-10 py-4 bg-white text-[#002D62] text-xs font-bold uppercase tracking-widest hover:bg-[#00A3E0] hover:text-white transition-colors rounded-full shadow-xl inline-flex items-center gap-2">
             Talk to our Experts <ArrowRight className="w-4 h-4" />
           </button>
         </div>

@@ -113,7 +113,8 @@ export default function App() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
                   style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000')",
+                    // PERFORMANCE FIX: Added fm=webp and reduced width to 1600
+                    backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=1600')",
                     transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)"
                   }}
                 />
@@ -163,7 +164,8 @@ export default function App() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
                   style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000')",
+                    // PERFORMANCE FIX: Added fm=webp and reduced width to 1600
+                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=1600')",
                     transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)"
                   }}
                 />
@@ -202,6 +204,7 @@ export default function App() {
 
             </main>
 
+            {/* 3. Corporate Footer */}
             <footer className="w-full py-5 px-6 md:px-12 font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0A192F] z-50 relative shadow-[0_-10px_30px_rgba(0,0,0,0.3)] border-t border-white/10">
               <span className="text-center md:text-left">© {new Date().getFullYear()} Sadev Group. All rights reserved.</span>
               <span className="text-center md:text-right hover:text-[#4CA6FF] transition-colors cursor-pointer font-bold text-white">Corporate Governance</span>
