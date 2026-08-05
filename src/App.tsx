@@ -12,8 +12,7 @@ import {
 } from "lucide-react";
 import { HelmetProvider } from "react-helmet-async";
 
-// 🔥 PERFORMANCE FIX 1: LAZY LOADING (Code Splitting)
-// Ab Infra aur Tech ka code tabhi load hoga jab user un button par click karega!
+// LAZY LOADING
 const SadevInfra = lazy(() => import("./components/sadevinfra/SadevInfra"));
 const SadevTech = lazy(() => import("./components/sadevtech/SadevTech"));
 
@@ -67,16 +66,24 @@ export default function App() {
         }`}
       >
         
+      {/* 🔥 MOBILE PERFORMANCE FIX: SMART RESPONSIVE CSS BACKGROUNDS */}
       <style dangerouslySetInnerHTML={{__html: `
         .font-body { font-family: 'Inter', sans-serif; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
+
+        /* Mobile First: Loads 800px image */
+        .bg-infra-hero { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=800'); }
+        .bg-tech-hero { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=800'); }
+
+        /* Desktop: Upgrades to 1600px image */
+        @media (min-width: 768px) {
+          .bg-infra-hero { background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=1600'); }
+          .bg-tech-hero { background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=1600'); }
+        }
       `}} />
 
       <AnimatePresence mode="wait">
         
-        {/* =========================================================
-            PORTAL GATEWAY VIEW 
-        ========================================================= */}
         {view === "gateway" && (
           <motion.div
             key="portal-gateway"
@@ -87,7 +94,6 @@ export default function App() {
             className="w-full h-full flex flex-col justify-between"
           >
             <header className="absolute top-8 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-md px-8 py-4 shadow-2xl border border-slate-200 flex items-center gap-4 transition-all duration-700 rounded-sm">
-              {/* 🔥 PERFORMANCE FIX 2: Added Explicit Width & Height */}
               <img 
                 src="/logo.png" 
                 alt="Sadev Group" 
@@ -101,6 +107,7 @@ export default function App() {
             </header>
 
             <main className="relative flex flex-col md:flex-row w-full h-full flex-1">
+              
               {/* --- LEFT SIDE --- */}
               <div 
                 onMouseEnter={() => setHoveredSide("left")}
@@ -110,11 +117,8 @@ export default function App() {
                 onClick={() => handleNavigate("infra")}
               >
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
-                  style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=60&fm=webp&w=1600')",
-                    transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)"
-                  }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%] bg-infra-hero"
+                  style={{ transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/30 transition-colors duration-700 ${hoveredSide === "left" ? "bg-white/60" : ""}`} />
 
@@ -156,11 +160,8 @@ export default function App() {
                 onClick={() => handleNavigate("tech")}
               >
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
-                  style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=60&fm=webp&w=1600')",
-                    transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)"
-                  }}
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out bg-tech-hero"
+                  style={{ transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" }}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#004B87]/80 to-[#0A192F]/60 transition-colors duration-700 ${hoveredSide === "right" ? "bg-[#0A192F]/70" : ""}`} />
 
