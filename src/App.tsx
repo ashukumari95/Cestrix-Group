@@ -110,7 +110,7 @@ export default function App() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
                   style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=50&fm=webp&w=1200')",
+                    backgroundImage: "url('/image60.png')",
                     transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" 
                   }}
                 />
@@ -157,7 +157,7 @@ export default function App() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
                   style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=50&fm=webp&w=1200')",
+                    backgroundImage: "url('/image59.png')",
                     transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" 
                   }}
                 />
