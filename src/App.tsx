@@ -66,7 +66,6 @@ export default function App() {
         }`}
       >
         
-      {/* FONTS ONLY (Removed complex media queries) */}
       <style dangerouslySetInnerHTML={{__html: `
         .font-body { font-family: 'Inter', sans-serif; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
@@ -106,14 +105,16 @@ export default function App() {
                 style={{ flex: hoveredSide === "left" ? 1.4 : hoveredSide === "right" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("infra")}
               >
-                {/* 🔥 GOLDEN RATIO BACKGROUND */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out grayscale-[20%]"
-                  style={{ 
-                    backgroundImage: "url('/image60.png')",
-                    transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" 
-                  }}
+                {/* 🔥 ULTIMATE LCP FIX: Standard IMG Tag */}
+                <div className="absolute inset-0 bg-[#E2E8F0] -z-10"></div>
+                <img 
+                  src="/image60.png"
+                  alt="Heavy Engineering Division"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out grayscale-[20%]"
+                  style={{ transform: hoveredSide === "left" ? "scale(1.05)" : "scale(1)" }}
+                  fetchPriority="high"
                 />
+                
                 <div className={`absolute inset-0 bg-gradient-to-t from-white/95 via-white/70 to-white/30 transition-colors duration-700 ${hoveredSide === "left" ? "bg-white/60" : ""}`} />
 
                 <div className="relative z-10 w-full max-w-2xl px-8 py-12 md:p-16 lg:p-24 text-left flex flex-col justify-end h-full mt-10 md:mt-0">
@@ -153,14 +154,16 @@ export default function App() {
                 style={{ flex: hoveredSide === "right" ? 1.4 : hoveredSide === "left" ? 0.6 : 1 }}
                 onClick={() => handleNavigate("tech")}
               >
-                {/* 🔥 GOLDEN RATIO BACKGROUND */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] ease-out"
-                  style={{ 
-                    backgroundImage: "url('/image59.png')",
-                    transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" 
-                  }}
+                {/* 🔥 ULTIMATE LCP FIX: Standard IMG Tag */}
+                <div className="absolute inset-0 bg-[#0A192F] -z-10"></div>
+                <img 
+                  src="/image59.png"
+                  alt="Technology Division"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] ease-out"
+                  style={{ transform: hoveredSide === "right" ? "scale(1.05)" : "scale(1)" }}
+                  fetchPriority="high"
                 />
+
                 <div className={`absolute inset-0 bg-gradient-to-t from-[#0A192F]/95 via-[#004B87]/80 to-[#0A192F]/60 transition-colors duration-700 ${hoveredSide === "right" ? "bg-[#0A192F]/70" : ""}`} />
 
                 <div className="relative z-10 w-full max-w-2xl px-8 py-12 md:p-16 lg:p-24 text-left flex flex-col justify-end h-full mt-10 md:mt-0">
