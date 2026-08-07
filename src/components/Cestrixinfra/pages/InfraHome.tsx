@@ -119,7 +119,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
               <span>Inspect Portfolio</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1.5" />
             </button>
-            <button onClick={() => openVideoModal("/video.mp4", "SADEV CORPORATE FILM")} className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-[#004B87] text-xs font-bold uppercase tracking-widest transition-all duration-500">
+            <button onClick={() => openVideoModal("/video.mp4", "Cestrix CORPORATE FILM")} className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-[#004B87] text-xs font-bold uppercase tracking-widest transition-all duration-500">
               <Play className="w-3 h-3 fill-current" />
               <span>Watch Film</span>
             </button>
@@ -169,13 +169,13 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 1 }} className="lg:col-span-7 space-y-8">
-            <span className="text-[10px] font-bold text-[#004B87] uppercase tracking-[0.2em] block mb-4 border-l-2 border-[#004B87] pl-3">THE SADEV DOCTRINE</span>
+            <span className="text-[10px] font-bold text-[#004B87] uppercase tracking-[0.2em] block mb-4 border-l-2 border-[#004B87] pl-3">THE Cestrix DOCTRINE</span>
             <h2 className="text-2xl md:text-4xl font-light text-slate-800 font-heading leading-snug">
               "An institution is not merely poured concrete and forged steel. It is an unyielding <span className="font-bold text-[#004B87]">execution ecosystem</span>, engineered to mitigate risk and serve the nation for generations."
             </h2>
             <div className="space-y-6 pt-6 border-t border-slate-200">
               <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
-                When Sadev was founded, the infrastructure landscape was plagued by subcontracting fragmentation and leased-equipment bottlenecks. Our vision was simple yet structurally radical: <strong className="font-semibold text-slate-900">Execute directly. Capitalize the machinery. Control the timeline.</strong> 
+                When Cestrix was founded, the infrastructure landscape was plagued by subcontracting fragmentation and leased-equipment bottlenecks. Our vision was simple yet structurally radical: <strong className="font-semibold text-slate-900">Execute directly. Capitalize the machinery. Control the timeline.</strong> 
               </p>
               <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
                 Today, that philosophy has scaled into a monumental reality. Whether we are utilizing advanced Tunnel Boring Machines in the Himalayas or pouring advanced low-carbon concrete for international aerotropolises, our core thesis remains unchanged. We do not just construct infrastructure; we engineer absolute predictability.
@@ -363,7 +363,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
               GLOBAL SUPPLY <br /><span className="font-bold text-[#004B87]">CHAIN INTEGRITY.</span>
             </h2>
             <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
-              Executing massive EPC contracts requires military-grade logistics. Sadev procures astronomical volumes of structural steel and aggregates, sourced directly from the world's most reputable mills. <br /><br /> By bypassing intermediaries and utilizing our internal fleet of transit mixers and heavy haulers, we insulate our projects from global supply chain shocks, raw material shortages, and aggressive pricing volatility.
+              Executing massive EPC contracts requires military-grade logistics. Cestrix procures astronomical volumes of structural steel and aggregates, sourced directly from the world's most reputable mills. <br /><br /> By bypassing intermediaries and utilizing our internal fleet of transit mixers and heavy haulers, we insulate our projects from global supply chain shocks, raw material shortages, and aggressive pricing volatility.
             </p>
           </div>
         </div>
@@ -382,7 +382,7 @@ export default function InfraHome({ onNavigateToPage, openVideoModal, onSwitchDi
             <div className="p-12 bg-slate-50 border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#004B87] transition-all duration-500 group">
               <HardHat className="w-10 h-10 text-[#004B87] mb-8" />
               <h3 className="text-xl font-bold text-slate-900 font-heading uppercase tracking-wide mb-4">The Capitalized Fleet</h3>
-              <p className="text-sm text-slate-600 font-light leading-relaxed mb-8">We reject the industry standard of equipment leasing. Sadev owns a colossal fleet of heavy hydraulic excavators, massive crawler cranes, and automated batching plants outright. This capitalization guarantees that our critical path never stalls waiting for third-party machinery.</p>
+              <p className="text-sm text-slate-600 font-light leading-relaxed mb-8">We reject the industry standard of equipment leasing. Cestrix owns a colossal fleet of heavy hydraulic excavators, massive crawler cranes, and automated batching plants outright. This capitalization guarantees that our critical path never stalls waiting for third-party machinery.</p>
               <button onClick={() => onNavigateToPage("fleet")} className="text-xs font-bold text-[#004B87] uppercase tracking-widest hover:text-[#4CA6FF] transition-colors flex items-center gap-2">
                 Inspect Live Telemetry <ArrowRight className="w-4 h-4" />
               </button>

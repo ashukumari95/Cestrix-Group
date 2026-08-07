@@ -95,7 +95,7 @@ export default function InfraFleet() {
             "We do not lease equipment. <br/><span className="font-bold text-[#004B87]">We own the execution.</span>"
           </h2>
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed font-body mt-8">
-            Sadev Group is one of the few global EPC conglomerates that operates a 100% internally owned fleet of heavy earthmoving, hoisting, and paving machinery. By completely bypassing third-party equipment leasing, we insulate our mega-projects from global supply-chain bottlenecks and guarantee absolute timeline predictability.
+            Cestrix Group is one of the few global EPC conglomerates that operates a 100% internally owned fleet of heavy earthmoving, hoisting, and paving machinery. By completely bypassing third-party equipment leasing, we insulate our mega-projects from global supply-chain bottlenecks and guarantee absolute timeline predictability.
           </p>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function InfraFleet() {
           
           <div className="mb-16 text-center md:text-left">
             <span className="text-[10px] font-bold text-[#004B87] uppercase tracking-[0.3em] block mb-4 border-l-2 border-[#004B87] pl-3 inline-block md:block">
-              THE SADEV ARSENAL
+              THE Cestrix ARSENAL
             </span>
             <h2 className="text-3xl md:text-5xl font-light text-slate-900 uppercase tracking-tight font-heading">
               Heavy Asset <span className="font-bold text-[#004B87]">Divisions.</span>
@@ -191,10 +191,10 @@ export default function InfraFleet() {
               HUMAN CAPITAL & TRAINING
             </span>
             <h2 className="text-3xl md:text-5xl font-light text-slate-900 uppercase tracking-tight font-heading leading-snug">
-              THE SADEV <span className="font-bold text-[#004B87]">ACADEMY.</span>
+              THE Cestrix <span className="font-bold text-[#004B87]">ACADEMY.</span>
             </h2>
             <p className="text-base text-slate-600 font-light leading-relaxed">
-              Heavy machinery is only as effective as the operator at the helm. At the Sadev Machinery Academy, we combine rigorous physical training with state-of-the-art Virtual Reality (VR) simulators.
+              Heavy machinery is only as effective as the operator at the helm. At the Cestrix Machinery Academy, we combine rigorous physical training with state-of-the-art Virtual Reality (VR) simulators.
             </p>
             <ul className="space-y-4 pt-4">
               <li className="flex items-start gap-4">
@@ -233,7 +233,7 @@ export default function InfraFleet() {
               Live IoT <br /><span className="font-bold text-[#4CA6FF]">Telematics.</span>
             </h2>
             <p className="text-sm md:text-base text-slate-300 font-light leading-relaxed">
-              Every single asset in the Sadev Group fleet is equipped with advanced Internet of Things (IoT) sensors. This raw data is beamed continuously via satellite directly to our Central Network Operations Center (NOC) in Noida.
+              Every single asset in the Cestrix Group fleet is equipped with advanced Internet of Things (IoT) sensors. This raw data is beamed continuously via satellite directly to our Central Network Operations Center (NOC) in Noida.
             </p>
             
             <div className="space-y-6 pt-6 border-t border-white/10">
@@ -281,7 +281,7 @@ export default function InfraFleet() {
               The Transition to a <span className="font-bold text-green-600">Green Fleet.</span>
             </h2>
             <p className="text-base text-slate-600 font-light leading-relaxed">
-              We are actively decarbonizing our massive operational footprint. Sadev Group is phasing out legacy diesel engines and investing heavily in the next generation of eco-friendly infrastructure equipment.
+              We are actively decarbonizing our massive operational footprint. Cestrix Group is phasing out legacy diesel engines and investing heavily in the next generation of eco-friendly infrastructure equipment.
             </p>
           </div>
 
@@ -322,7 +322,7 @@ export default function InfraFleet() {
               ZERO <span className="font-bold text-[#004B87]">BREAKDOWNS.</span>
             </h2>
             <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
-              Downtime is the enemy of infrastructure. To combat this, Sadev Group maintains 15+ central base workshops distributed strategically across the subcontinent. 
+              Downtime is the enemy of infrastructure. To combat this, Cestrix Group maintains 15+ central base workshops distributed strategically across the subcontinent. 
             </p>
             <ul className="space-y-4 pt-6">
               {[

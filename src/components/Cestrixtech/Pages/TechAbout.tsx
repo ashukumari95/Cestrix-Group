@@ -32,7 +32,7 @@ export default function TechAbout() {
         <div className="absolute inset-0 z-0">
           <img 
             src="/image40.png" 
-            alt="Corporate Identity Sadev Tech" 
+            alt="Corporate Identity Cestrix Tech" 
             className="w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#001730]/95 via-[#001730]/70 to-transparent"></div>
@@ -52,7 +52,7 @@ export default function TechAbout() {
               initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.5 }}
               className="text-slate-200 text-sm md:text-base font-light leading-relaxed max-w-lg mb-10 drop-shadow-md"
             >
-              Sadev Tech is a premier deep-tech consultancy dedicated to modernizing heavy engineering, aviation, and national infrastructure. We merge industrial expertise with elite software architecture.
+              Cestrix Tech is a premier deep-tech consultancy dedicated to modernizing heavy engineering, aviation, and national infrastructure. We merge industrial expertise with elite software architecture.
             </motion.p>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function TechAbout() {
               Empowering Heavy Industries with Elite Software Architecture.
             </h2>
             <p className="text-slate-600 font-light leading-relaxed text-sm md:text-base">
-              We stand at the forefront of digital transformation for complex physical sectors. Sadev Tech partners with leading logistics, infrastructure, and energy corporations to deploy robust cloud applications, scalable ERPs, and secure data networks that drive measurable business outcomes.
+              We stand at the forefront of digital transformation for complex physical sectors. Cestrix Tech partners with leading logistics, infrastructure, and energy corporations to deploy robust cloud applications, scalable ERPs, and secure data networks that drive measurable business outcomes.
             </p>
           </motion.div>
           <motion.div variants={fadeUp} className="md:w-2/5 flex justify-center md:justify-end w-full">
@@ -100,7 +100,7 @@ export default function TechAbout() {
                 Pioneering the Digital Frontier in Enterprise IT.
               </h2>
               <p className="text-slate-600 font-light leading-relaxed text-sm">
-                Our foundation is built on the reality that standard IT frameworks often fail in rugged environments. Sadev Tech evolved to bridge the gap between Silicon Valley-grade code and ground-level industrial operations. Our mission is to engineer software that functions flawlessly, regardless of physical complexities.
+                Our foundation is built on the reality that standard IT frameworks often fail in rugged environments. Cestrix Tech evolved to bridge the gap between Silicon Valley-grade code and ground-level industrial operations. Our mission is to engineer software that functions flawlessly, regardless of physical complexities.
               </p>
             </motion.div>
             <motion.div variants={staggerContainer} className="md:w-1/2 flex flex-col sm:flex-row gap-4">
@@ -225,7 +225,7 @@ export default function TechAbout() {
             <div className="relative z-10 bg-white/5 backdrop-blur-xl border border-white/10 text-white p-8 md:p-12 w-full md:w-[45%] md:mt-24 md:mb-12 md:ml-12 rounded-2xl flex flex-col justify-center border-l-4 border-l-[#00A3E0]">
               <h3 className="text-2xl font-bold font-heading mb-6">Our Talent Pool</h3>
               <p className="text-slate-300 font-light leading-relaxed text-sm mb-6">
-                Sadev Tech is driven by a unique synergy of senior cloud architects, AI researchers, and domain specialists. We don’t just write code; we understand the mechanical and logistical realities of the businesses we serve.
+                Cestrix Tech is driven by a unique synergy of senior cloud architects, AI researchers, and domain specialists. We don’t just write code; we understand the mechanical and logistical realities of the businesses we serve.
               </p>
               <p className="text-slate-300 font-light leading-relaxed text-sm mb-8">
                 This collective intellectual rigor enables us to solve complex enterprise bottlenecks that standard IT agencies simply cannot process.
@@ -302,7 +302,7 @@ export default function TechAbout() {
              <div className="md:w-3/5 bg-white p-10 md:p-16 flex flex-col justify-center relative">
                <h3 className="text-2xl md:text-3xl font-bold text-[#002D62] font-heading mb-6 z-10">Constructing the digital foundation for tomorrow</h3>
                <p className="text-slate-600 text-sm font-light leading-relaxed mb-8 z-10">
-                 Whether it involves scalable data processing, predictive analytics, or modernized user interfaces, Sadev Tech provides the robust IT infrastructure necessary to thrive in a data-centric future.
+                 Whether it involves scalable data processing, predictive analytics, or modernized user interfaces, Cestrix Tech provides the robust IT infrastructure necessary to thrive in a data-centric future.
                </p>
                <button onClick={() => { window.location.hash = "services"; window.dispatchEvent(new HashChangeEvent("hashchange")); }} className="bg-[#002D62] text-white px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest hover:bg-[#00A3E0] transition-colors rounded-full flex items-center gap-2 w-fit shadow-md">
                  Explore Our Software Suite <ArrowRight className="w-4 h-4"/>

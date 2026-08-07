@@ -1,6 +1,6 @@
 {
-  "name": "Sadev Group Split-Screen Gateway",
-  "description": "Premium industrial gateway for Sadev Group showcasing Heavy Infrastructure EPC Projects and Agile Digital Integration Platforms.",
+  "name": "Cestrix Group Split-Screen Gateway",
+  "description": "Premium industrial gateway for Cestrix Group showcasing Heavy Infrastructure EPC Projects and Agile Digital Integration Platforms.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -13,7 +13,7 @@ import {
 interface TechNavbarProps {
   currentPage?: string;
   onPageChange?: (page: string) => void;
-  onNavigate?: (view: "gateway" | "infra" | "tech") => void;
+  onNavigate?: (view: "gateway" | "infra" | "tech" | "governance") => void; // 🔥 FIX: Added 'governance' to match App.tsx
 }
 
 export default function TechNavbar({ currentPage, onPageChange, onNavigate }: TechNavbarProps) {
@@ -22,7 +22,7 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   // Apna WhatsApp Number Yahan Dalein (e.g., 919876543210)
-  const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Sadev%20Tech,%20I%20need%20software%20solutions.";
+  const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Cestrix%20Tech,%20I%20need%20software%20solutions.";
 
   // Bina reload kiye page change karne ka function
   const handlePageChange = (e: React.MouseEvent, pageKey: string) => {
@@ -82,19 +82,22 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
       <nav className="fixed top-0 left-0 right-0 bg-white border-b border-slate-200 z-[100] shadow-sm">
         <div className="max-w-[1400px] mx-auto px-6 h-[76px] lg:h-[88px] flex items-center justify-between">
           
-          {/* LOGO + SADEV TECH TEXT */}
+          {/* LOGO + Cestrix Tech TEXT (🔥 UPDATED: Title Case & Normal Spacing) */}
           <a href="#overview" onClick={(e) => handlePageChange(e, 'overview')} className="flex items-center gap-3 cursor-pointer select-none outline-none">
             <img 
-              src="/logo.png" 
-              alt="Sadev Logo" 
+              src="/logo.webp" 
+              alt="Cestrix Logo" 
               className="h-10 md:h-11 w-auto object-contain"
               onError={(e) => {
                 (e.target as HTMLElement).style.display = "none";
               }}
             />
-            <div className="flex flex-col justify-center">
-              <span className="text-xl font-bold text-[#002D62] tracking-wide leading-none flex items-center gap-1.5">
-                SADEV <span className="font-light text-slate-400">TECH</span>
+            <div className="flex items-center pt-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+              <span className="text-xl md:text-2xl font-semibold text-[#002D62] leading-none">
+                Cestrix
+              </span>
+              <span className="text-xl md:text-2xl font-light text-slate-400 leading-none ml-1.5">
+                Tech
               </span>
             </div>
           </a>
@@ -175,7 +178,7 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
               </a>
               
               <a 
-                href="mailto:contact@sadevtech.com" 
+                href="mailto:contact@Cestrixtech.com" 
                 title="Email Us"
                 className="hover:text-[#00A3E0] transition-colors flex items-center h-full outline-none"
               >
@@ -212,9 +215,14 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
 
             <div className="w-[1px] h-6 bg-slate-200"></div>
 
-            {/* Sadev Infra Link */}
-            <a href="#" onClick={handleInfraClick} className="text-[13px] font-bold text-[#002D62] hover:text-[#00A3E0] transition-colors outline-none">
-              Sadev Infra
+            {/* Cestrix Infra Link (🔥 UPDATED: Title Case & Normal Spacing) */}
+            <a 
+              href="#" 
+              onClick={handleInfraClick} 
+              className="text-[13px] md:text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors outline-none"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              Cestrix Infra
             </a>
 
             {/* DIRECT WHATSAPP CONTACT BUTTON (DESKTOP) */}
@@ -267,12 +275,13 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
                 </a>
               ))}
               
+              {/* MOBILE: Cestrix Infra Link (🔥 UPDATED) */}
               <a 
                 href="#"
                 onClick={handleInfraClick}
                 className="flex items-center justify-between py-3 border-b border-slate-100 text-sm font-bold text-[#002D62] uppercase tracking-widest hover:text-[#00A3E0] outline-none"
               >
-                Sadev Infra <ArrowRight className="w-4 h-4 text-[#00A3E0]" />
+                Cestrix Infra <ArrowRight className="w-4 h-4 text-[#00A3E0]" />
               </a>
 
               {/* DIRECT WHATSAPP CONTACT BUTTON (MOBILE) */}

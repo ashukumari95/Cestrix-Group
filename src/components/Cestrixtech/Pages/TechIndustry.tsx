@@ -117,7 +117,7 @@ export default function TechIndustry() {
         <div className="absolute inset-0 z-0">
           <img 
             src="/image38.png" 
-            alt="Sadev Tech Real World Software" 
+            alt="Cestrix Tech Real World Software" 
             className="w-full h-full object-cover opacity-90"
           />
           {/* Dark gradient on the left side so the white text is perfectly readable */}
@@ -256,7 +256,7 @@ export default function TechIndustry() {
       <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#001730] text-white">
         <div className="max-w-[1300px] mx-auto">
           <div className="text-center mb-16">
-             <span className="text-[10px] font-bold text-[#00A3E0] uppercase tracking-[0.2em] mb-4 block">WHY CHOOSE SADEV TECH</span>
+             <span className="text-[10px] font-bold text-[#00A3E0] uppercase tracking-[0.2em] mb-4 block">WHY CHOOSE Cestrix TECH</span>
              <h2 className="text-3xl md:text-5xl font-bold font-heading">Built for the Real World.</h2>
           </div>
 

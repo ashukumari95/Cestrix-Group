@@ -50,7 +50,7 @@ export default function InfraTender() {
     // Getting form data
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "📢 NEW VENDOR REGISTRATION - Sadev Infra");
+    formData.append("subject", "📢 NEW VENDOR REGISTRATION - Cestrix Infra");
     formData.append("from_name", "Vendor Portal");
 
     try {
@@ -86,7 +86,7 @@ export default function InfraTender() {
             Supply Chain & Strategic Partners
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-tight font-heading drop-shadow-xl">
-            Partner With <br /><span className="font-bold text-white">Sadev Group.</span>
+            Partner With <br /><span className="font-bold text-white">Cestrix Group.</span>
           </h1>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function InfraTender() {
             "Building reliable, long-term <br/><span className="font-bold text-[#004B87]">industry partnerships.</span>"
           </h2>
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed font-body mt-8">
-            Executing large infrastructure projects requires a dependable supply chain. Sadev Group invites material suppliers, engineering sub-contractors, and equipment providers to register with our procurement network.
+            Executing large infrastructure projects requires a dependable supply chain. Cestrix Group invites material suppliers, engineering sub-contractors, and equipment providers to register with our procurement network.
           </p>
         </div>
       </section>
@@ -320,7 +320,7 @@ export default function InfraTender() {
                     <button type="submit" disabled={isSubmitting} className="w-full bg-[#004B87] text-white py-4 font-bold text-xs uppercase tracking-widest hover:bg-slate-900 transition-colors disabled:opacity-70">
                       {isSubmitting ? "Submitting Data..." : "Submit Pre-Qualification Request"}
                     </button>
-                    <p className="text-center text-[10px] text-slate-500 mt-4">By submitting, you agree to the Sadev Group's strict anti-corruption and evaluation policies.</p>
+                    <p className="text-center text-[10px] text-slate-500 mt-4">By submitting, you agree to the Cestrix Group's strict anti-corruption and evaluation policies.</p>
                   </div>
                 </form>
               </div>

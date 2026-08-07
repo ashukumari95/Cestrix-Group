@@ -57,7 +57,7 @@ export default function TechServices() {
               initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.5 }}
               className="text-slate-200 text-sm md:text-base font-light leading-relaxed max-w-lg mb-10 drop-shadow-md"
             >
-              Generic IT solutions break under the immense scale and complexity of heavy civil engineering and manufacturing. Sadev Tech architects highly specialized, enterprise-grade software ecosystems that deliver absolute operational control, from the boardroom to the construction site.
+              Generic IT solutions break under the immense scale and complexity of heavy civil engineering and manufacturing. Cestrix Tech architects highly specialized, enterprise-grade software ecosystems that deliver absolute operational control, from the boardroom to the construction site.
             </motion.p>
           </div>
         </div>

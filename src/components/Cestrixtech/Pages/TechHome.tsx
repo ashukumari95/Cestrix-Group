@@ -301,7 +301,7 @@ export default function TechHome() {
               Solving the Era's <br /> Greatest Challenges.
             </h2>
             <p className="text-sm md:text-base text-slate-300 leading-relaxed font-light">
-              We execute in the present to fund the future. Sadev Tech is actively investing its engineering capital into the mega-trends that will define the next century of human progress.
+              We execute in the present to fund the future. Cestrix Tech is actively investing its engineering capital into the mega-trends that will define the next century of human progress.
             </p>
           </div>
 
@@ -409,7 +409,7 @@ export default function TechHome() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#F8FAFC] p-10 rounded-2xl border border-slate-200">
               <p className="text-slate-600 italic mb-8 leading-relaxed font-light">
-                "Sadev Tech's software actually understands how construction works. Their new ERP system saved us countless hours in material tracking and completely eliminated subcontractor billing fraud."
+                "Cestrix Tech's software actually understands how construction works. Their new ERP system saved us countless hours in material tracking and completely eliminated subcontractor billing fraud."
               </p>
               <div className="flex items-center gap-4 border-t border-slate-200 pt-6">
                 <div className="w-12 h-12 bg-slate-200 rounded-full overflow-hidden">

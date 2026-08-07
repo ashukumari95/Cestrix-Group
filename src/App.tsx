@@ -12,12 +12,11 @@ import {
 } from "lucide-react";
 import { HelmetProvider } from "react-helmet-async";
 
-// LAZY LOADING (🔥 Added Governance Page)
-const SadevInfra = lazy(() => import("./components/sadevinfra/SadevInfra"));
-const SadevTech = lazy(() => import("./components/sadevtech/SadevTech"));
+// LAZY LOADING
+const CestrixInfra = lazy(() => import("./components/Cestrixinfra/CestrixInfra"));
+const CestrixTech = lazy(() => import("./components/Cestrixtech/CestrixTech"));
 const CorporateGovernance = lazy(() => import("./components/CorporateGovernance"));
 
-// 🔥 Added "governance" to the view types
 type AppView = "gateway" | "infra" | "tech" | "governance";
 
 export default function App() {
@@ -82,7 +81,7 @@ export default function App() {
             transition={{ duration: 0.8 }}
             className="w-full h-full flex flex-col justify-between relative"
           >
-            {/* FLOATING LOGO PILL */}
+            {/* FLOATING LOGO PILL (🔥 FIXED: ALL CAPS, NORMAL SPACING) */}
             <header className="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center bg-white/95 backdrop-blur-xl px-8 py-3 md:px-10 md:py-4 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-slate-200/50 transition-all duration-700 hover:scale-[1.02] cursor-pointer">
               <div className="flex items-center justify-center gap-3">
                 <img 
@@ -90,11 +89,11 @@ export default function App() {
                   alt="CG" 
                   className="h-8 md:h-10 w-auto object-contain drop-shadow-sm"
                 />
-                <div className="flex items-center pt-1">
-                  <span className="text-xl md:text-[24px] font-semibold tracking-widest font-heading text-[#053282] uppercase leading-none">
+                <div className="flex items-center pt-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                  <span className="text-xl md:text-[24px] font-semibold text-[#053282] uppercase leading-none">
                     CESTRIX
                   </span>
-                  <span className="text-xl md:text-[24px] font-light tracking-widest font-heading text-[#64748B] uppercase leading-none ml-2">
+                  <span className="text-xl md:text-[24px] font-light text-[#64748B] uppercase leading-none ml-1.5">
                     GROUP
                   </span>
                 </div>
@@ -188,7 +187,6 @@ export default function App() {
 
             <footer className="w-full py-3 md:py-4 px-6 md:px-12 font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400 flex flex-col md:flex-row justify-between items-center gap-2 bg-[#050B14] z-50 relative border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-center md:text-left">© {new Date().getFullYear()} Cestrix Group.</span>
-              {/* 🔥 UPDATED LINK: Now opens the Corporate Governance page */}
               <span 
                 onClick={() => handleNavigate("governance")}
                 className="text-center md:text-right hover:text-[#4CA6FF] transition-colors cursor-pointer font-semibold text-slate-300"
@@ -203,7 +201,7 @@ export default function App() {
         {view === "infra" && (
           <motion.div key="infra-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
             <Suspense fallback={<div className="w-full h-screen bg-[#F8FAFC] flex items-center justify-center font-heading text-[#053282] font-semibold tracking-widest uppercase text-xs">Loading Infra...</div>}>
-              <SadevInfra onNavigate={handleNavigate} />
+              <CestrixInfra onNavigate={handleNavigate} />
             </Suspense>
           </motion.div>
         )}
@@ -211,12 +209,11 @@ export default function App() {
         {view === "tech" && (
           <motion.div key="tech-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
             <Suspense fallback={<div className="w-full h-screen bg-[#0B1121] flex items-center justify-center font-heading text-[#4CA6FF] font-semibold tracking-widest uppercase text-xs">Loading Tech...</div>}>
-              <SadevTech onNavigate={handleNavigate} />
+              <CestrixTech onNavigate={handleNavigate} />
             </Suspense>
           </motion.div>
         )}
 
-        {/* 🔥 NEW ROUTE: CORPORATE GOVERNANCE */}
         {view === "governance" && (
           <motion.div key="gov-view" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
             <Suspense fallback={<div className="w-full h-screen bg-[#F8FAFC] flex items-center justify-center font-heading text-[#053282] font-semibold tracking-widest uppercase text-xs">Loading Legal...</div>}>

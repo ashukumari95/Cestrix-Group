@@ -16,7 +16,7 @@ import {
 
 interface InfraFooterProps {
   onPageChange: (page: "home" | "projects" | "fleet" | "sustainability" | "tender") => void;
-  onNavigate: (view: "gateway" | "infra" | "tech") => void;
+  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
 }
 
 export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterProps) {
@@ -34,7 +34,6 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
     if (email) {
       setIsLoading(true);
       try {
-        // API Call to send email to your Gmail
         await fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: {
@@ -44,9 +43,9 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
           body: JSON.stringify({
             access_key: WEB3FORMS_ACCESS_KEY,
             email: email,
-            subject: "🔔 New Newsletter Subscription - Sadev Infra",
+            subject: "🔔 New Newsletter Subscription - Cestrix Infra",
             message: `New user subscribed to newsletter: ${email}`,
-            from_name: "Sadev Website Portal"
+            from_name: "Cestrix Website Portal"
           }),
         });
         
@@ -65,7 +64,7 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
   };
 
   return (
-    <footer className="w-full font-sans selection:bg-[#4CA6FF] selection:text-white">
+    <footer className="w-full font-sans selection:bg-[#4CA6FF] selection:text-white" role="contentinfo">
       
       {/* 1. TOP CALL TO ACTION / NEWSLETTER STRIP */}
       <div className="bg-[#004B87] py-10 px-6 md:px-12 lg:px-24">
@@ -85,6 +84,7 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              aria-label="Official Email Address"
               placeholder="Official Email Address" 
               className="flex-1 px-6 text-slate-800 text-sm outline-none disabled:bg-slate-50" 
               disabled={isSubscribed || isLoading}
@@ -92,6 +92,7 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
             <button 
               type="submit" 
               disabled={isSubscribed || isLoading}
+              aria-label="Subscribe to newsletter"
               className={`h-full px-8 font-bold text-xs uppercase tracking-widest transition-colors flex items-center justify-center min-w-[140px] gap-2 ${
                 isSubscribed 
                   ? "bg-green-600 text-white cursor-default" 
@@ -111,16 +112,31 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
           
           {/* Brand */}
           <div className="lg:col-span-4 space-y-8">
-            <h4 className="text-xs font-bold text-[#4CA6FF] uppercase tracking-[0.2em] font-heading">
-              SADEV INFRASTRUCTURE
-            </h4>
+            
+            {/* 🔥 FIX: Cleaned up spacing and Title Case to perfectly match Navbar */}
+            <div 
+              onClick={() => onPageChange("home")}
+              className="flex items-center cursor-pointer inline-flex"
+              role="button"
+              tabIndex={0}
+              aria-label="Cestrix Infra Home"
+              style={{ fontFamily: "'Montserrat', sans-serif" }}
+            >
+              <span className="text-xl md:text-2xl font-semibold text-white leading-none">
+                Cestrix
+              </span>
+              <span className="text-xl md:text-2xl font-light text-[#4CA6FF] leading-none ml-1.5">
+                Infra
+              </span>
+            </div>
+
             <p className="text-sm text-slate-400 font-light leading-relaxed max-w-sm">
               Engineering the nation's most critical sovereign infrastructure. From deepwater ports to high-altitude defense corridors, we execute with absolute precision and unyielding integrity.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/company/sadev-infra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Linkedin className="w-4 h-4" /></a>
-              <a href="https://x.com/Sadevinfra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Twitter className="w-4 h-4" /></a>
-              <a href="https://www.facebook.com/share/17nJJee7Tq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Facebook className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/company/Cestrix-infra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Linkedin className="w-4 h-4" /></a>
+              <a href="https://x.com/Cestrixinfra" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Twitter className="w-4 h-4" /></a>
+              <a href="https://www.facebook.com/share/17nJJee7Tq" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Facebook className="w-4 h-4" /></a>
             </div>
           </div>
 
@@ -144,7 +160,7 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
               <li><button onClick={() => onPageChange("fleet")} className="hover:text-[#4CA6FF] transition-colors">Heavy Fleet Setup</button></li>
               <li><button onClick={() => onPageChange("sustainability")} className="hover:text-[#4CA6FF] transition-colors">ESG Governance</button></li>
               <li><button onClick={() => onPageChange("tender")} className="hover:text-[#4CA6FF] transition-colors">Vendor Registration</button></li>
-              <li className="pt-2"><button onClick={() => onNavigate("tech")} className="hover:text-white transition-colors text-[#4CA6FF] font-medium border-b border-[#4CA6FF]/30 pb-1">Sadev Tech Ecosystem</button></li>
+              <li className="pt-2"><button onClick={() => onNavigate("tech")} className="hover:text-white transition-colors text-[#4CA6FF] font-medium border-b border-[#4CA6FF]/30 pb-1">Cestrix Tech Ecosystem</button></li>
               <li><button onClick={() => onNavigate("gateway")} className="hover:text-white transition-colors text-[#4CA6FF] font-medium border-b border-[#4CA6FF]/30 pb-1">Global Gateway</button></li>
             </ul>
           </div>
@@ -154,12 +170,12 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
             <h4 className="text-xs font-bold text-[#4CA6FF] uppercase tracking-[0.2em] font-heading mb-8">Corporate Desk</h4>
             <div className="space-y-6 text-sm text-slate-300 font-light">
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#4CA6FF] shrink-0" />
+                <Phone className="w-4 h-4 text-[#4CA6FF] shrink-0" aria-hidden="true" />
                 <a href="tel:+918955957893" className="hover:text-white transition-colors">+91 89559 57893</a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#4CA6FF] shrink-0" />
-                <a href="mailto:sadevinfra@gmail.com" className="hover:text-white transition-colors">sadevinfra@gmail.com</a>
+                <Mail className="w-4 h-4 text-[#4CA6FF] shrink-0" aria-hidden="true" />
+                <a href="mailto:info@cestrixgroup.com" className="hover:text-white transition-colors">info@cestrixgroup.com</a>
               </div>
             </div>
           </div>
@@ -167,9 +183,15 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
       </div>
 
       {/* 3. BOTTOM LEGAL BAR */}
-      <div className="bg-[#050D1A] py-6 px-6 md:px-12 lg:px-24">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-center text-xs text-slate-500 font-light">
-          <p>© {new Date().getFullYear()} Sadev Group Limited. All Rights Reserved.</p>
+      <div className="bg-[#050D1A] py-6 px-6 md:px-12 lg:px-24 border-t border-slate-800/80">
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-light">
+          <p>© {new Date().getFullYear()} Cestrix Group Limited. All Rights Reserved.</p>
+          <button 
+            onClick={() => onNavigate("governance")}
+            className="hover:text-[#4CA6FF] transition-colors cursor-pointer font-medium"
+          >
+            Governance & Legal Compliance
+          </button>
         </div>
       </div>
     </footer>

@@ -15,15 +15,16 @@ import TechServices from "./Pages/TechServices";
 import TechInsights from "./Pages/TechInsights";
 import TechAbout from "./Pages/TechAbout";
 
-interface SadevTechProps {
-  onNavigate: (view: "gateway" | "infra" | "tech") => void;
+// 🔥 UPDATED: Added "governance" to the onNavigate props
+interface CestrixTechProps {
+  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
 }
 
 // Clean URL routes
 type TechPage = "overview" | "industry" | "services" | "insights" | "about-us";
 const VALID_PAGES: TechPage[] = ["overview", "industry", "services", "insights", "about-us"];
 
-export default function SadevTech({ onNavigate }: SadevTechProps) {
+export default function CestrixTech({ onNavigate }: CestrixTechProps) {
   
   // 1. URL Path check karke page decide karna (Hash ki jagah Path use kiya hai)
   const [currentPage, setCurrentPage] = useState<TechPage>(() => {

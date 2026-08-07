@@ -16,13 +16,14 @@ import InfraFleet from "./pages/InfraFleet";
 import InfraSustainability from "./pages/InfraSustainability";
 import InfraTender from "./pages/InfraTender";
 
-interface SadevInfraProps {
-  onNavigate: (view: "gateway" | "infra" | "tech") => void;
+// 🔥 UPDATED: Added "governance" to the onNavigate props
+interface CestrixInfraProps {
+  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
 }
 
 const VALID_PAGES: InfraPage[] = ["home", "projects", "fleet", "sustainability", "tender"];
 
-export default function SadevInfra({ onNavigate }: SadevInfraProps) {
+export default function CestrixInfra({ onNavigate }: CestrixInfraProps) {
   
   // 1. CLEAN URL LOGIC: Hash (#) hata kar Path check karega
   const [currentPage, setCurrentPage] = useState<InfraPage>(() => {
@@ -122,7 +123,7 @@ export default function SadevInfra({ onNavigate }: SadevInfraProps) {
         onNavigate={onNavigate} 
       />
 
-      {/* MAIN VIEWPORT (Fixed the blank screen bug by removing AnimatePresence) */}
+      {/* MAIN VIEWPORT */}
       <main className="relative z-10 w-full flex-1 flex flex-col justify-start pt-[88px] md:pt-[104px]">
         <motion.div
           key={currentPage}

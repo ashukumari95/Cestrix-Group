@@ -59,7 +59,7 @@ export default function TechInsights() {
               initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.5 }}
               className="text-slate-200 text-sm md:text-base font-light leading-relaxed max-w-lg mb-10 drop-shadow-md"
             >
-              Read how Sadev Tech helps construction, logistics, and energy companies streamline their operations. Explore our case studies on Custom Software, 3D Apps, and Live Tracking Dashboards.
+              Read how Cestrix Tech helps construction, logistics, and energy companies streamline their operations. Explore our case studies on Custom Software, 3D Apps, and Live Tracking Dashboards.
             </motion.p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function TechInsights() {
               Automating Enterprise Supply Chains with Custom IT.
             </h2>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light mb-8 relative z-10">
-              Discover how replacing fragmented legacy tools with a unified Sadev Tech Web Dashboard helped a national infrastructure leader eradicate manual billing errors, streamline material tracking, and accelerate project delivery.
+              Discover how replacing fragmented legacy tools with a unified Cestrix Tech Web Dashboard helped a national infrastructure leader eradicate manual billing errors, streamline material tracking, and accelerate project delivery.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10 mt-auto pt-4">
@@ -295,7 +295,7 @@ export default function TechInsights() {
               See the Software <br /> in Action.
             </h2>
             <p className="text-slate-300 font-light leading-relaxed text-sm md:text-base">
-              Don't just take our word for it. Watch our recorded product videos to see exactly how simple, clean, and powerful Sadev Tech's software applications are for your team.
+              Don't just take our word for it. Watch our recorded product videos to see exactly how simple, clean, and powerful Cestrix Tech's software applications are for your team.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="bg-white text-[#001730] px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest hover:bg-[#00A3E0] hover:text-white transition-colors rounded-full shadow-lg flex items-center gap-2">

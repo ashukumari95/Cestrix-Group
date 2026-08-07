@@ -91,7 +91,7 @@ export default function TechContact() {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Enterprise Sales</p>
-                    <a href="mailto:enterprise@sadevtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">enterprise@sadevtech.com</a>
+                    <a href="mailto:enterprise@Cestrixtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">enterprise@Cestrixtech.com</a>
                   </div>
                 </div>
                 
@@ -101,7 +101,7 @@ export default function TechContact() {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">IT Support & Maintenance</p>
-                    <a href="mailto:support@sadevtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">support@sadevtech.com</a>
+                    <a href="mailto:support@Cestrixtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">support@Cestrixtech.com</a>
                   </div>
                 </div>
 
@@ -111,7 +111,7 @@ export default function TechContact() {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1">Careers & HR</p>
-                    <a href="mailto:careers@sadevtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">careers@sadevtech.com</a>
+                    <a href="mailto:careers@Cestrixtech.com" className="text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors">careers@Cestrixtech.com</a>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function TechContact() {
                   <h4 className="text-sm font-bold mb-1">Global Headquarters</h4>
                   <p className="text-xs text-slate-300 font-light leading-relaxed flex items-start gap-2 mt-2">
                     <MapPin className="w-4 h-4 text-[#00A3E0] shrink-0" />
-                    Sadev Tech Park, Cyber City,<br />Mumbai, India 400081
+                    Cestrix Tech Park, Cyber City,<br />Mumbai, India 400081
                   </p>
                   <p className="text-xs text-slate-300 font-light flex items-center gap-2 mt-2">
                     <Phone className="w-4 h-4 text-[#00A3E0] shrink-0" /> +91 22 4567 8900

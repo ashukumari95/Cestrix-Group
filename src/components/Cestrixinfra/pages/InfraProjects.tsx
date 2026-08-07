@@ -93,7 +93,7 @@ const SECTORS_DATA = [
   }
 ];
 
-// --- REALISTIC PROJECTS: Sadev as an Execution Partner/Sub-Contractor ---
+// --- REALISTIC PROJECTS: Cestrix as an Execution Partner/Sub-Contractor ---
 const INITIAL_PROJECTS = [
   // AVIATION
   { id: "AV-092", title: "Indira Gandhi Int. Airport - T1 Expansion", category: "aviation", magnitude: "Roofing & Structural Phase", imageUrl: "/image23.png" },
@@ -259,7 +259,7 @@ export default function InfraProjects({ openVideoModal }: InfraProjectsProps) {
       <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-black">
         <img 
           src="/sector.jpg" 
-          alt="Sadev Megastructures" 
+          alt="Cestrix Megastructures" 
           className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale-[20%]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A192F]/80 via-[#004B87]/30 to-[#FAFAFA]" />
@@ -281,7 +281,7 @@ export default function InfraProjects({ openVideoModal }: InfraProjectsProps) {
             "Building massive projects <br/><span className="font-bold text-[#004B87]">with perfect precision.</span>"
           </h2>
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed font-body mt-8">
-            Welcome to the Sadev Group's project portfolio. We work on the largest construction projects, building airports, seaports, defense sites, and power plants across the country.
+            Welcome to the Cestrix Group's project portfolio. We work on the largest construction projects, building airports, seaports, defense sites, and power plants across the country.
           </p>
           <p className="text-sm md:text-base text-slate-500 font-light leading-relaxed font-body">
             Every project shown here proves our strong working model. By functioning as specialized execution partners, we use our own heavy machines and 3D planning software to deliver critical project phases exactly on time.

@@ -56,7 +56,7 @@ export default function InfraSustainability() {
             "Growth is only sovereign if it is <br/><span className="font-bold text-[#004B87]">equitable and sustainable.</span>"
           </h2>
           <p className="text-base md:text-lg text-slate-600 font-light leading-relaxed font-body mt-8">
-            At Sadev Group, Environmental, Social, and Governance (ESG) principles are not an afterthought; they are hard-coded into our core engineering blueprint. We recognize that mega-infrastructure reshapes the earth. Our mandate is to ensure that this transformation minimizes ecological disruption, maximizes human capital safety, and enforces absolute financial transparency.
+            At Cestrix Group, Environmental, Social, and Governance (ESG) principles are not an afterthought; they are hard-coded into our core engineering blueprint. We recognize that mega-infrastructure reshapes the earth. Our mandate is to ensure that this transformation minimizes ecological disruption, maximizes human capital safety, and enforces absolute financial transparency.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function InfraSustainability() {
           {[
             { metric: "45%", label: "Carbon Footprint", label2: "Reduction", detail: "Via M80 Green Concrete" },
             { metric: "2.5M", label: "Safe Man-Hours", detail: "Zero-Harm Culture" },
-            { metric: "150+", label: "Communities", label2: "Uplifted", detail: "Via Sadev Foundation" },
+            { metric: "150+", label: "Communities", label2: "Uplifted", detail: "Via Cestrix Foundation" },
             { metric: "100%", label: "Compliance", detail: "COSO & ISO Audited" }
           ].map((stat, idx) => (
             <div key={idx} className="p-8 md:p-12 flex flex-col justify-center items-center text-center">
@@ -139,7 +139,7 @@ export default function InfraSustainability() {
               Human Capital & <br/><span className="font-bold text-[#004B87]">Zero-Harm.</span>
             </h2>
             <p className="text-sm md:text-base text-slate-600 font-light leading-relaxed">
-              Our workforce is the engine of our execution. Sadev Group enforces an absolute "Zero-Harm" operational culture. No deadline is worth compromising the safety of the individuals forging our structures.
+              Our workforce is the engine of our execution. Cestrix Group enforces an absolute "Zero-Harm" operational culture. No deadline is worth compromising the safety of the individuals forging our structures.
             </p>
             <ul className="space-y-4 pt-6">
               {[
@@ -161,17 +161,17 @@ export default function InfraSustainability() {
         </div>
       </section>
 
-      {/* 6. CSR: THE SADEV FOUNDATION */}
+      {/* 6. CSR: THE Cestrix FOUNDATION */}
       <section className="w-full py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#0A192F] text-white">
         <div className="max-w-[1400px] mx-auto text-center space-y-12">
           
           <div className="max-w-3xl mx-auto space-y-6">
             <Heart className="w-12 h-12 text-[#4CA6FF] mx-auto" />
             <h2 className="text-3xl md:text-5xl font-light text-white uppercase tracking-tight font-heading leading-snug">
-              Sadev Varalakshmi <br/><span className="font-bold text-[#4CA6FF]">Social Foundation.</span>
+              Cestrix Varalakshmi <br/><span className="font-bold text-[#4CA6FF]">Social Foundation.</span>
             </h2>
             <p className="text-base text-slate-300 font-light leading-relaxed">
-              We do not just extract resources from the regions we operate in; we reinvest. The Sadev Foundation operates deep within the rural peripheries of our mega-project sites, focusing on healthcare and skill enablement.
+              We do not just extract resources from the regions we operate in; we reinvest. The Cestrix Foundation operates deep within the rural peripheries of our mega-project sites, focusing on healthcare and skill enablement.
             </p>
           </div>
 

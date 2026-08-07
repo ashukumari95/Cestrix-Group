@@ -15,14 +15,14 @@ export default function TechFooter({ onNavigate }: TechFooterProps) {
   const WEB3FORMS_ACCESS_KEY = "74647f40-ca2f-49c1-ab13-baddadd2cd7e";
   
   // Aapka WhatsApp Link yahan set kiya gaya hai
-  const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Sadev%20Tech,%20I%20would%20like%20to%20discuss%20an%20enterprise%20software%20project.";
+  const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Cestrix%20Tech,%20I%20would%20like%20to%20discuss%20an%20enterprise%20software%20project.";
 
   const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     const formData = new FormData(e.currentTarget);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-    formData.append("subject", "📢 SADEV TECH - EXPERT HELP REQUEST");
+    formData.append("subject", "📢 Cestrix TECH - EXPERT HELP REQUEST");
 
     try {
       await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
@@ -78,7 +78,8 @@ export default function TechFooter({ onNavigate }: TechFooterProps) {
                   <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center">
                     <Mail className="w-5 h-5 text-[#00A3E0]" />
                   </div>
-                  <span>sadevinfra@gmail.com</span>
+                  {/* 🔥 UPDATED TO OFFICIAL EMAIL */}
+                  <span>info@cestrixgroup.com</span>
                 </div>
               </div>
 
@@ -137,16 +138,26 @@ export default function TechFooter({ onNavigate }: TechFooterProps) {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mb-16">
             <div className="space-y-6 lg:col-span-2 pr-8">
+               
+               {/* 🔥 FIX: Cleaned up spacing and Title Case for Tech Footer Logo */}
                <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigateTo('overview')}>
-                  <img src="/logo.png" alt="Sadev Tech Logo" className="h-10 w-auto object-contain brightness-0 invert" onError={(e) => { (e.target as HTMLElement).style.display = "none"; }} />
-                  <span className="text-xl font-bold tracking-[0.1em] font-heading uppercase text-white">SADEV <span className="font-light text-slate-400">TECH</span></span>
+                  <img src="/logo.webp" alt="Cestrix Tech Logo" className="h-10 w-auto object-contain brightness-0 invert" onError={(e) => { (e.target as HTMLElement).style.display = "none"; }} />
+                  <div className="flex items-center pt-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                    <span className="text-xl md:text-2xl font-semibold text-white leading-none">
+                      Cestrix
+                    </span>
+                    <span className="text-xl md:text-2xl font-light text-[#00A3E0] leading-none ml-1.5">
+                      Tech
+                    </span>
+                  </div>
                </div>
+
                <p className="text-sm text-slate-300 font-light leading-relaxed max-w-sm">
-                 Sadev Tech provides easy-to-use, secure, and powerful software solutions tailored specifically for heavy engineering, transportation, energy, and defense sectors.
+                 Cestrix Tech provides easy-to-use, secure, and powerful software solutions tailored specifically for heavy engineering, transportation, energy, and defense sectors.
                </p>
                <div className="flex items-center gap-4">
-                 <a href="https://www.linkedin.com/company/sadev-infra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Linkedin className="w-4 h-4" /></a>
-                 <a href="https://x.com/Sadevinfra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Twitter className="w-4 h-4" /></a>
+                 <a href="https://www.linkedin.com/company/Cestrix-infra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Linkedin className="w-4 h-4" /></a>
+                 <a href="https://x.com/Cestrixinfra" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Twitter className="w-4 h-4" /></a>
                  <a href="https://www.facebook.com/share/17nJJee7Tq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Facebook className="w-4 h-4" /></a>
                </div>
             </div>
@@ -177,14 +188,14 @@ export default function TechFooter({ onNavigate }: TechFooterProps) {
                 <li><button onClick={() => navigateTo('about-us')} className="hover:text-white transition-colors">About Us</button></li>
                 {/* Fixed Contact Us Link to open WhatsApp */}
                 <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><button onClick={() => onNavigate("infra")} className="hover:text-white transition-colors">Sadev Infra Division</button></li>
+                <li><button onClick={() => onNavigate("infra")} className="hover:text-white transition-colors">Cestrix Infra Division</button></li>
                 <li><button onClick={() => onNavigate("gateway")} className="hover:text-white transition-colors">Global Gateway</button></li>
               </ul>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 gap-6 text-xs text-slate-400 font-light">
-            <p>© {new Date().getFullYear()} Sadev Group Limited. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Cestrix Group Limited. All Rights Reserved.</p>
             <div className="flex gap-6">
               <button className="hover:text-white transition-colors">Privacy Policy</button>
               <button className="hover:text-white transition-colors">Disclaimer</button>
