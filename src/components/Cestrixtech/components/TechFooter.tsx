@@ -12,7 +12,7 @@ interface TechFooterProps {
 
 export default function TechFooter({ onNavigate }: TechFooterProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const WEB3FORMS_ACCESS_KEY = "74647f40-ca2f-49c1-ab13-baddadd2cd7e";
+  const WEB3FORMS_ACCESS_KEY = "aa320ee2-92bd-42bd-ae13-eb96cb0d9778";
   
   // Aapka WhatsApp Link yahan set kiya gaya hai
   const WHATSAPP_LINK = "https://wa.me/918955957893?text=Hello%20Cestrix%20Tech,%20I%20would%20like%20to%20discuss%20an%20enterprise%20software%20project.";

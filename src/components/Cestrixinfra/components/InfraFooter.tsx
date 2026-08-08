@@ -27,7 +27,7 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
   // ==========================================
   // 🔑 YAHAN APNI WEB3FORMS ACCESS KEY DAALEIN
   // ==========================================
-  const WEB3FORMS_ACCESS_KEY = "74647f40-ca2f-49c1-ab13-baddadd2cd7e"; 
+  const WEB3FORMS_ACCESS_KEY = "aa320ee2-92bd-42bd-ae13-eb96cb0d9778"; 
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
