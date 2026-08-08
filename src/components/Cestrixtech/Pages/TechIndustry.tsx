@@ -231,10 +231,10 @@ export default function TechIndustry() {
                     </div>
 
                     <div className="mt-auto">
+                      {/* 🔥 FIX: Changed logic to smoothly scroll to the Contact Form */}
                       <button 
                         onClick={() => {
-                          window.location.hash = "contact";
-                          window.dispatchEvent(new HashChangeEvent("hashchange"));
+                          document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                         }}
                         className="bg-[#002D62] text-white px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest hover:bg-[#00A3E0] transition-colors rounded-full flex items-center gap-2 w-fit shadow-md"
                       >
@@ -318,10 +318,10 @@ export default function TechIndustry() {
           <p className="text-slate-600 text-sm md:text-base font-light leading-relaxed mb-10 max-w-xl mx-auto">
             Book a free call with our experts today. We will understand your problems and build a custom software plan for you.
           </p>
+          {/* 🔥 FIX: Changed logic to smoothly scroll to the Contact Form */}
           <button 
             onClick={() => {
-              window.location.hash = "contact";
-              window.dispatchEvent(new HashChangeEvent("hashchange"));
+              document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
             }} 
             className="px-10 py-4 bg-[#002D62] text-white text-[11px] font-bold uppercase tracking-widest hover:bg-[#00A3E0] transition-colors rounded-full shadow-xl inline-flex items-center gap-3"
           >

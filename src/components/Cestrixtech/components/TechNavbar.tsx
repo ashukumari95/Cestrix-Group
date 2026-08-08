@@ -178,7 +178,7 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
               </a>
               
               <a 
-                href="mailto:contact@Cestrixtech.com" 
+                href="mailto:info@cestrixgroup.com" 
                 title="Email Us"
                 className="hover:text-[#00A3E0] transition-colors flex items-center h-full outline-none"
               >
@@ -217,7 +217,7 @@ export default function TechNavbar({ currentPage, onPageChange, onNavigate }: Te
 
             {/* Cestrix Infra Link (🔥 UPDATED: Title Case & Normal Spacing) */}
             <a 
-              href="#" 
+              href="mailto:info@cestrixgroup.com" 
               onClick={handleInfraClick} 
               className="text-[13px] md:text-sm font-semibold text-[#002D62] hover:text-[#00A3E0] transition-colors outline-none"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
