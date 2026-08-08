@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.sadevinfra.com/sitemap.xml
+Sitemap: https://www.cestrixgroup.com/sitemap.xml
