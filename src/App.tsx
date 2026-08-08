@@ -78,7 +78,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             className="w-full h-full flex flex-col justify-between relative"
           >
             {/* FLOATING LOGO PILL (🔥 FIXED: ALL CAPS, NORMAL SPACING) */}
@@ -122,23 +122,23 @@ export default function App() {
                   style={{ opacity: hoveredSide === "left" ? 1 : 0 }}
                 />
                 <div className="relative z-10 w-full max-w-lg px-8 pb-8 pt-24 md:pt-12 md:p-12 text-center flex flex-col items-center justify-center h-full mx-auto">
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.8 }}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
                     <span className="inline-flex items-center gap-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] font-heading text-[#053282] mb-4 md:mb-8 bg-white/80 px-3 py-1 rounded-full shadow-sm">
                       <HardHat className="w-4 h-4 md:w-5 md:h-5" /> Heavy Engineering
                     </span>
                   </motion.div>
-                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
                     className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tight text-slate-900 leading-[1.1] font-heading mb-4 md:mb-6 drop-shadow-md"
                   >
                     Physical <br />
                     <span className="font-semibold">Execution.</span>
                   </motion.h2>
-                  <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }}
+                  <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}
                     className="text-xs md:text-sm lg:text-base text-slate-800 font-medium leading-relaxed max-w-md font-body mb-8 md:mb-12 drop-shadow-sm"
                   >
                     Pioneering the future of global infrastructure. From visionary marine and aviation hubs to monumental civil structures, we deliver unprecedented scale with uncompromising precision.
                   </motion.p>
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
                     <button className="inline-flex items-center justify-center gap-3 bg-[#053282] border border-[#053282] text-white px-8 py-3 md:px-10 md:py-4 text-[10px] md:text-xs font-semibold uppercase tracking-[0.15em] hover:bg-[#031d4d] transition-all duration-300 rounded-full shadow-lg shadow-blue-900/40 w-auto">
                       <span>Explore Infra</span>
                     </button>
@@ -160,23 +160,23 @@ export default function App() {
                   style={{ opacity: hoveredSide === "right" ? 1 : 0 }}
                 />
                 <div className="relative z-10 w-full max-w-lg px-8 py-10 pt-16 md:pt-12 md:p-12 text-center flex flex-col items-center justify-center h-full mx-auto">
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.8 }}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
                     <span className="inline-flex items-center gap-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] font-heading text-[#4CA6FF] mb-4 md:mb-8 bg-[#0B1121]/80 px-3 py-1 rounded-full shadow-sm">
                       <Cpu className="w-4 h-4 md:w-5 md:h-5" /> Software & Tech
                     </span>
                   </motion.div>
-                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
                     className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tight text-white leading-[1.1] font-heading mb-4 md:mb-6 drop-shadow-lg"
                   >
                     Digital <br />
                     <span className="font-semibold">Integration.</span>
                   </motion.h2>
-                  <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.8 }}
+                  <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}
                     className="text-xs md:text-sm lg:text-base text-slate-200 font-light leading-relaxed max-w-md font-body mb-8 md:mb-12 drop-shadow-md"
                   >
                     Transforming heavy industries through advanced digital ecosystems. We integrate predictive AI, real-time spatial computing, and autonomous systems to engineer the infrastructure of tomorrow.
                   </motion.p>
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.8 }}>
+                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
                     <button className="inline-flex items-center justify-center gap-3 bg-white/10 border border-white/40 text-white px-8 py-3 md:px-10 md:py-4 text-[10px] md:text-xs font-semibold uppercase tracking-[0.15em] hover:bg-white hover:text-[#0B1121] transition-all duration-300 rounded-full w-auto shadow-lg">
                       <span>Explore Tech</span>
                     </button>
