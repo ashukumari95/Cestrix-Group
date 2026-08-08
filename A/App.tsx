@@ -81,28 +81,27 @@ export default function App() {
             transition={{ duration: 0.3 }}
             className="w-full h-full flex flex-col justify-between relative"
           >
-            {/* FLOATING LOGO PILL */}
+            {/* FLOATING LOGO PILL (🔥 FIXED: ALL CAPS, NORMAL SPACING) */}
             <header className="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center bg-white/95 backdrop-blur-xl px-8 py-3 md:px-10 md:py-4 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-slate-200/50 transition-all duration-700 hover:scale-[1.02] cursor-pointer">
               <div className="flex items-center justify-center gap-3">
-                {/* 🔥 FIX: Changed alt text to be descriptive for Accessibility test */}
-                <img 
-                  src="/logo.webp" 
-                  alt="Cestrix Group Logo"
-                  width="40"
-                  height="40"
-                  loading="eager"
-                  fetchpriority="high"
-                  className="h-8 md:h-10 w-auto object-contain drop-shadow-sm"
-                />
-                {/* 🔥 FIX: Changed div to h1 for the Missing Heading Tag SEO test */}
-                <h1 className="flex items-center pt-1 m-0" style={{ fontFamily: "'Montserrat', sans-serif" }}>
+                {/* App.tsx mein logo wale img tag ko is se replace karein */}
+<img 
+  src="/logo.webp" 
+  alt="CG"
+  width="40"
+  height="40"
+  loading="eager"
+  fetchpriority="high"
+  className="h-8 md:h-10 w-auto object-contain drop-shadow-sm"
+/>
+                <div className="flex items-center pt-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   <span className="text-xl md:text-[24px] font-semibold text-[#053282] uppercase leading-none">
                     CESTRIX
                   </span>
                   <span className="text-xl md:text-[24px] font-light text-[#64748B] uppercase leading-none ml-1.5">
                     GROUP
                   </span>
-                </h1>
+                </div>
               </div>
             </header>
 
@@ -123,12 +122,12 @@ export default function App() {
                   style={{ opacity: hoveredSide === "left" ? 1 : 0 }}
                 />
                 <div className="relative z-10 w-full max-w-lg px-8 pb-8 pt-24 md:pt-12 md:p-12 text-center flex flex-col items-center justify-center h-full mx-auto">
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
                     <span className="inline-flex items-center gap-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] font-heading text-[#053282] mb-4 md:mb-8 bg-white/80 px-3 py-1 rounded-full shadow-sm">
                       <HardHat className="w-4 h-4 md:w-5 md:h-5" /> Heavy Engineering
                     </span>
                   </motion.div>
-                  <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
                     className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tight text-slate-900 leading-[1.1] font-heading mb-4 md:mb-6 drop-shadow-md"
                   >
                     Physical <br />
@@ -161,12 +160,12 @@ export default function App() {
                   style={{ opacity: hoveredSide === "right" ? 1 : 0 }}
                 />
                 <div className="relative z-10 w-full max-w-lg px-8 py-10 pt-16 md:pt-12 md:p-12 text-center flex flex-col items-center justify-center h-full mx-auto">
-                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
                     <span className="inline-flex items-center gap-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] font-heading text-[#4CA6FF] mb-4 md:mb-8 bg-[#0B1121]/80 px-3 py-1 rounded-full shadow-sm">
                       <Cpu className="w-4 h-4 md:w-5 md:h-5" /> Software & Tech
                     </span>
                   </motion.div>
-                  <motion.h2 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}
+                  <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}
                     className="text-4xl md:text-5xl lg:text-[4rem] font-light tracking-tight text-white leading-[1.1] font-heading mb-4 md:mb-6 drop-shadow-lg"
                   >
                     Digital <br />
