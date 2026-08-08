@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.env$
+
 Sitemap: https://www.cestrixgroup.com/sitemap.xml
