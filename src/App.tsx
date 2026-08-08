@@ -84,11 +84,16 @@ export default function App() {
             {/* FLOATING LOGO PILL (🔥 FIXED: ALL CAPS, NORMAL SPACING) */}
             <header className="absolute top-8 md:top-12 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center bg-white/95 backdrop-blur-xl px-8 py-3 md:px-10 md:py-4 rounded-full shadow-[0_15px_40px_rgba(0,0,0,0.12)] border border-slate-200/50 transition-all duration-700 hover:scale-[1.02] cursor-pointer">
               <div className="flex items-center justify-center gap-3">
-                <img 
-                  src="/logo.webp" 
-                  alt="CG" 
-                  className="h-8 md:h-10 w-auto object-contain drop-shadow-sm"
-                />
+                {/* App.tsx mein logo wale img tag ko is se replace karein */}
+<img 
+  src="/logo.webp" 
+  alt="CG"
+  width="40"
+  height="40"
+  loading="eager"
+  fetchpriority="high"
+  className="h-8 md:h-10 w-auto object-contain drop-shadow-sm"
+/>
                 <div className="flex items-center pt-1" style={{ fontFamily: "'Montserrat', sans-serif" }}>
                   <span className="text-xl md:text-[24px] font-semibold text-[#053282] uppercase leading-none">
                     CESTRIX
