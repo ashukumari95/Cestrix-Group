@@ -15,25 +15,27 @@ import TechServices from "./Pages/TechServices";
 import TechInsights from "./Pages/TechInsights";
 import TechAbout from "./Pages/TechAbout";
 
-// 🔥 UPDATED: Added "governance" to the onNavigate props
+// 🔥 All 4 Legal Pages Imported Here
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsOfUse from "./Pages/TermsOfUse";
+import Disclaimer from "./Pages/Disclaimer";
+import CookiesPolicy from "./Pages/CookiesPolicy";
+
 interface CestrixTechProps {
-  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
+  onNavigate: (view: "gateway" | "infra" | "tech" | "privacy" | "terms" | "disclaimer" | "cookies") => void;
 }
 
-// Clean URL routes
-type TechPage = "overview" | "industry" | "services" | "insights" | "about-us";
-const VALID_PAGES: TechPage[] = ["overview", "industry", "services", "insights", "about-us"];
+type TechPage = "overview" | "industry" | "services" | "insights" | "about-us" | "privacy" | "terms" | "disclaimer" | "cookies";
+const VALID_PAGES: TechPage[] = ["overview", "industry", "services", "insights", "about-us", "privacy", "terms", "disclaimer", "cookies"];
 
 export default function CestrixTech({ onNavigate }: CestrixTechProps) {
   
-  // 1. URL Path check karke page decide karna (Hash ki jagah Path use kiya hai)
   const [currentPage, setCurrentPage] = useState<TechPage>(() => {
     const pathParts = window.location.pathname.split("/").filter(Boolean);
     const page = (pathParts[1] || "overview") as TechPage;
     return VALID_PAGES.includes(page) ? page : "overview";
   });
 
-  // 2. Naya page aane par URL ko Clean format mein update karna
   useEffect(() => {
     const newPath = currentPage === "overview" ? "/tech" : `/tech/${currentPage}`;
     if (window.location.pathname !== newPath) {
@@ -48,7 +50,6 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
     }
   }, [currentPage]);
 
-  // 3. Browser Back/Forward button ko handle karna
   useEffect(() => {
     const handlePopState = () => {
       const pathParts = window.location.pathname.split("/").filter(Boolean);
@@ -65,7 +66,6 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // 4. TechHome aur TechFooter ke buttons ke clicks sun-na
   useEffect(() => {
     const handleCustomNav = (e: Event) => {
       const customEvent = e as CustomEvent;
@@ -86,6 +86,13 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
       case "services": return <TechServices />;
       case "insights": return <TechInsights />;
       case "about-us": return <TechAbout />;
+      
+      // 🔥 All 4 Legal Pages Rendered Correctly
+      case "privacy": return <PrivacyPolicy onNavigate={onNavigate} />;
+      case "terms": return <TermsOfUse onNavigate={onNavigate} />;
+      case "disclaimer": return <Disclaimer onNavigate={onNavigate} />;
+      case "cookies": return <CookiesPolicy onNavigate={onNavigate} />;
+
       default:
         return (
           <div className="w-full min-h-[70vh] flex flex-col items-center justify-center bg-[#F4F6F8] pt-24 pb-12 px-6">
@@ -102,7 +109,6 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
   return (
     <div className="w-full min-h-screen text-slate-900 bg-[#F4F6F8] relative overflow-x-hidden font-sans selection:bg-[#4CA6FF] selection:text-white pb-0 flex flex-col justify-between">
       
-     {/* GLOBAL FONTS */}
       <style dangerouslySetInnerHTML={{__html: `
         .font-body { font-family: 'Inter', sans-serif; }
         .font-heading { font-family: 'Montserrat', sans-serif; }
@@ -122,7 +128,11 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
         </motion.div>
       </main>
 
-      <TechFooter onNavigate={onNavigate} />
+      <TechFooter 
+        onNavigate={onNavigate} 
+        onPageChange={setCurrentPage} 
+        hideContactForm={["privacy", "terms", "disclaimer", "cookies"].includes(currentPage)}
+      />
 
     </div>
   );
