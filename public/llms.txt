@@ -1,15 +1,43 @@
 # Cestrix Group
 
-> Cestrix Group is a leading multinational enterprise specializing in heavy infrastructure engineering and advanced digital technology integration.
+> Cestrix Group Limited is a premier multinational conglomerate specializing in heavy civil infrastructure engineering (EPC) and enterprise digital technology integration.
 
-## Corporate Divisions
+## Corporate Structure & Key Portals
 
-Here are the official portals and directories for Cestrix Group:
+### 1. Global Gateway
+- [Cestrix Global Gateway](https://cestrixgroup.com/): Central corporate overview, portal selector, and cross-divisional routing.
 
-- [Cestrix Global Gateway](https://www.cestrixgroup.com/) - The central corporate overview and routing portal.
-- [Cestrix Infrastructure](https://www.cestrixgroup.com/infra) - Engineering heavy infrastructure, marine, aviation, and monumental civil developments across global frontiers with precision and ESG sustainability.
-- [Cestrix Technology](https://www.cestrixgroup.com/tech) - Transforming heavy industries through advanced digital ecosystems, predictive AI, live IoT tracking, and cybersecurity.
-- [Corporate Governance](https://www.cestrixgroup.com/governance) - Legal compliance, ESG frameworks, and corporate policies.
+### 2. Cestrix Infrastructure Division
+Engaged in heavy civil developments, high-altitude transport corridors, marine structures, and monumental engineering projects.
+- [Infra Division Overview](https://cestrixgroup.com/infra): Heavy infrastructure capabilities, fleet logistics, and EPC contracts.
+- [Projects Portal](https://cestrixgroup.com/infra/projects): Active and completed monumental engineering assignments.
+- [Fleet & Machinery](https://cestrixgroup.com/infra/fleet): Telematics-enabled heavy machinery and equipment assets.
+- [ESG & Sustainability](https://cestrixgroup.com/infra/sustainability): Carbon-neutral concrete, environmental compliance, and green building standards.
+- [Commercial Tenders](https://cestrixgroup.com/infra/tender): Procurement, joint-venture bidding, and RFQ submissions.
 
-## Contact & Enterprise Support
-For joint ventures, tender registrations, or enterprise software deployments, please contact our official corporate desk at info@cestrixgroup.com.
+### 3. Cestrix Technology Division
+Delivering custom B2B enterprise software, industrial IoT telematics, 3D/5D Digital Twin simulations, and zero-trust cloud architectures.
+- [Tech Division Overview](https://cestrixgroup.com/tech): Digital ecosystem integration, enterprise software, and cloud systems.
+- [Industries Served](https://cestrixgroup.com/tech/industry): Solutions tailored for EPC engineering, aviation, maritime, energy, and defense.
+- [Services & Capabilities](https://cestrixgroup.com/tech/services): Custom ERP development, Digital Twin modeling, IoT tracking, and cyber defense.
+- [Corporate Insights](https://cestrixgroup.com/tech/insights): Engineering whitepapers, technology analysis, and case studies.
+- [About Tech Division](https://cestrixgroup.com/tech/about-us): Corporate mission, leadership team, and innovation standards.
+
+### 4. Corporate Governance & Legal
+- [Privacy Policy](https://cestrixgroup.com/tech/privacy): Data privacy policies, ISO/IEC 27001 zero-trust security standards.
+- [Terms of Use](https://cestrixgroup.com/tech/terms): Enterprise portal terms, usage agreements, and IP rights.
+- [Legal Disclaimer](https://cestrixgroup.com/tech/disclaimer): Technical estimation disclaimers and engineering liability baselines.
+- [Cookies Policy](https://cestrixgroup.com/tech/cookies): Cookie architecture, tracking compliance, and user options.
+
+## Core Capabilities & Specializations
+- **Heavy Infrastructure (EPC):** Highways, bridge structures, deep-foundation piling, marine harbors, and aviation runways.
+- **Digital Twin & BIM Integration:** 3D/5D building information modeling and real-time site simulation.
+- **Industrial IoT & Telematics:** Real-time heavy fleet telemetry, fuel optimization, and predictive equipment maintenance.
+- **Enterprise Software Development:** Proprietary ERP and supply-chain platforms designed specifically for large-scale contracting.
+
+## Contact & Enterprise Desk
+For joint ventures, government tender registrations, or enterprise software consultation:
+- **Email:** info@cestrixgroup.com
+- **Legal Inquiries:** legal@cestrixgroup.com
+- **Privacy Desk:** privacy@cestrixgroup.com
+- **Website:** https://cestrixgroup.com
