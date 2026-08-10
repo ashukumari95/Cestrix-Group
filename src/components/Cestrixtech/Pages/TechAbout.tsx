@@ -31,7 +31,7 @@ export default function TechAbout() {
       <section className="relative w-full h-[65vh] min-h-[450px] flex items-center overflow-hidden bg-[#001730]">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/image40.png" 
+            src="/image40.webp" 
             alt="Corporate Identity Cestrix Tech" 
             className="w-full h-full object-cover opacity-80"
           />
@@ -104,8 +104,8 @@ export default function TechAbout() {
               </p>
             </motion.div>
             <motion.div variants={staggerContainer} className="md:w-1/2 flex flex-col sm:flex-row gap-4">
-               <motion.img variants={fadeUp} src="/image47.png" className="w-full sm:w-1/2 h-48 object-cover rounded-xl shadow-md hover:scale-[1.02] transition-transform" alt="Engineering Team" />
-               <motion.img variants={fadeUp} src="/image55.png" className="w-full sm:w-1/2 h-48 object-cover rounded-xl shadow-md hover:scale-[1.02] transition-transform" alt="Tech Dashboard" />
+               <motion.img variants={fadeUp} src="/image47.webp" className="w-full sm:w-1/2 h-48 object-cover rounded-xl shadow-md hover:scale-[1.02] transition-transform" alt="Engineering Team" />
+               <motion.img variants={fadeUp} src="/image55.webp" className="w-full sm:w-1/2 h-48 object-cover rounded-xl shadow-md hover:scale-[1.02] transition-transform" alt="Tech Dashboard" />
             </motion.div>
           </motion.div>
 
@@ -164,7 +164,7 @@ export default function TechAbout() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex flex-col md:flex-row gap-8 bg-[#F8FAFC] p-6 md:p-10 rounded-2xl shadow-sm border border-slate-200">
             <div className="md:w-2/5 relative h-64 md:h-auto min-h-[250px] rounded-xl overflow-hidden group cursor-pointer border border-slate-300 shadow-md">
-              <img src="/image37.png" alt="Leadership Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="/image37.webp" alt="Leadership Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-[#001730]/40 flex items-center justify-center">
                 <div className="w-16 h-16 bg-[#00A3E0] rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-[#002D62] transition-colors shadow-lg">
                   <PlayCircle className="w-8 h-8 ml-1" />
@@ -217,7 +217,7 @@ export default function TechAbout() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="relative w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden bg-slate-900 flex flex-col md:flex-row shadow-[0_20px_50px_rgba(0,163,224,0.1)]">
             
             <div className="absolute inset-0 md:left-[30%] z-0">
-               <img src="/image56.png" alt="Team" className="w-full h-full object-cover opacity-80 mix-blend-luminosity" />
+               <img src="/image56.webp" alt="Team" className="w-full h-full object-cover opacity-80 mix-blend-luminosity" />
                <div className="absolute inset-0 bg-gradient-to-r from-[#001730] via-[#001730]/80 to-transparent md:hidden"></div>
                <div className="absolute inset-0 bg-gradient-to-r from-[#001730] via-transparent to-transparent hidden md:block"></div>
             </div>
@@ -273,7 +273,7 @@ export default function TechAbout() {
           </motion.div>
           <motion.div variants={fadeUp} className="lg:w-1/2 w-full relative">
             <div className="w-full h-[450px] bg-[#001730] shadow-2xl relative overflow-hidden rounded-[2rem] border border-slate-200" style={{ clipPath: "polygon(10% 0, 100% 0, 100% 100%, 0% 100%)" }}>
-              <img src="/image57.png" alt="Partnership" className="w-full h-full object-cover opacity-80" />
+              <img src="/image57.webp" alt="Partnership" className="w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#002D62]/80 to-transparent"></div>
             </div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-4 border-l-4 border-[#FFC000] z-0 opacity-80 rounded-bl-3xl"></div>
@@ -296,7 +296,7 @@ export default function TechAbout() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="w-full flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,45,98,0.1)] relative border border-slate-200">
              <div className="md:w-2/5 relative h-64 md:h-auto bg-[#001730]">
-               <img src="/image52.png" className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-1000" alt="Tech Future" />
+               <img src="/image52.webp" className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:scale-105 transition-transform duration-1000" alt="Tech Future" />
              </div>
              
              <div className="md:w-3/5 bg-white p-10 md:p-16 flex flex-col justify-center relative">

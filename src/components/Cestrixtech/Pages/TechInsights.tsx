@@ -33,7 +33,7 @@ export default function TechInsights() {
         {/* Background Image Setup */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/insights.png" 
+            src="/insights.webp" 
             alt="Insights Background" 
             className="w-full h-full object-cover opacity-90"
           />
@@ -147,7 +147,7 @@ export default function TechInsights() {
             </div>
           </div>
           <div className="md:w-1/2 relative min-h-[400px] bg-[#001730] overflow-hidden cursor-pointer">
-            <img src="/image48.png" alt="ERP Software Dashboard" className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen group-hover:scale-105 transition-transform duration-700" />
+            <img src="/image48.webp" alt="ERP Software Dashboard" className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-screen group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/10 to-transparent hidden md:block"></div>
           </div>
         </div>
@@ -175,19 +175,19 @@ export default function TechInsights() {
                 sector: "3D Software",
                 title: "3D Design Tool for Airport Terminal Expansion",
                 impact: "Software identified 120+ design errors, preventing months of costly physical rework.",
-                img: "/image49.png"
+                img: "/image49.webp"
               },
               {
                 sector: "Live Tracking App",
                 title: "Live GPS & Fuel Tracking for Heavy Truck Fleets",
                 impact: "IoT Dashboard reduced unauthorized fuel usage and engine idling by 22%.",
-                img: "/image50.png"
+                img: "/image50.webp"
               },
               {
                 sector: "Cloud Security",
                 title: "Securing Cloud Data for Government Energy Plants",
                 impact: "Achieved 100% data compliance and automatically blocked 4,000+ daily threats.",
-                img: "/image52.png"
+                img: "/image52.webp"
               }
             ].map((item, idx) => (
               <motion.div key={idx} variants={fadeUp} className="bg-white border border-slate-100 hover:shadow-[0_15px_40px_rgba(0,45,98,0.08)] hover:border-[#00A3E0]/40 transition-all duration-500 group flex flex-col rounded-[1.5rem] overflow-hidden hover:-translate-y-2 cursor-pointer">
@@ -251,7 +251,7 @@ export default function TechInsights() {
           
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="lg:w-1/2 w-full">
              <div className="relative h-[450px] w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200">
-               <img src="/image53.png" className="w-full h-full object-cover" alt="Software Team" />
+               <img src="/image53.webp" className="w-full h-full object-cover" alt="Software Team" />
                <div className="absolute inset-0 bg-[#002D62]/10 mix-blend-multiply"></div>
                
                <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-200 flex items-center gap-4">
@@ -275,7 +275,7 @@ export default function TechInsights() {
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center gap-16">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="md:w-1/2 w-full">
             <div className="relative h-[400px] md:h-[450px] w-full rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,163,224,0.15)] border border-white/10 group cursor-pointer">
-              <img src="/image54.png" alt="Software Demo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" />
+              <img src="/image54.webp" alt="Software Demo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#001730] via-[#001730]/40 to-transparent"></div>
               
               <div className="absolute inset-0 flex flex-col items-center justify-center">

@@ -32,7 +32,7 @@ const SECTORS_DATA = [
     description: "We partner with lead developers to execute critical infrastructure within massive aviation projects. Our expertise lies in high-tolerance runway paving and heavy structural steel erections for terminal buildings.",
     philosophy: "We view airports not just as transit points, but as sovereign economic engines. Our execution strategy focuses on zero-disruption phasing, ensuring parallel operations during massive expansions so that air traffic never halts.",
     machinery: "Deployed fleet includes laser-guided slip-form pavers, heavy-duty asphalt batching plants, and long-reach tower cranes specifically calibrated for rapid terminal construction.",
-    imageUrl: "/image17.png",
+    imageUrl: "/image17.webp",
     scaleInfo: { magnitude: "National Scale", footprint: "Global Corridors" },
     capabilities: ["Commercial Runway Paving", "Terminal Structural Steel", "Automated Cargo Tracks", "Airfield Earthworks"]
   },
@@ -43,7 +43,7 @@ const SECTORS_DATA = [
     description: "Working alongside global port authorities, we execute specialized marine operations. From deploying anti-corrosive concrete for breakwaters to executing deepwater hydraulic piling for new cargo berths.",
     philosophy: "Oceanic engineering demands zero margin for error. We construct defensive breakwaters and deepwater berths engineered to withstand century-level storm surges and highly corrosive saline environments.",
     machinery: "Our internal fleet features barge-mounted hydraulic piling rigs, massive offshore cutter suction dredgers, and heavy-lift jack-up vessels designed for deepwater stability.",
-    imageUrl: "/image18.png",
+    imageUrl: "/image18.webp",
     scaleInfo: { magnitude: "Mega-Project Level", footprint: "Coastal Hubs" },
     capabilities: ["Hydraulic Deepwater Piling", "Marine Grade Concrete", "Port Yard Paving", "Breakwater Tetrapods"]
   },
@@ -54,7 +54,7 @@ const SECTORS_DATA = [
     description: "We serve as critical execution partners in the energy sector. We supply massive volumes of specialized concrete and execute complex structural foundations for dams, refineries, and power plants.",
     philosophy: "Energy security is national security. We deploy specialized containment protocols for nuclear sites and utilize high-altitude logistical planning for massive hydroelectric dams in the most hostile terrains.",
     machinery: "Operating with heavy crawler cranes, high-capacity concrete transit mixers, and automated sub-zero batching units capable of functioning in extreme weather conditions.",
-    imageUrl: "/image19.png",
+    imageUrl: "/image19.webp",
     scaleInfo: { magnitude: "National Power Grid", footprint: "Country-Wide" },
     capabilities: ["Reactor Shielding Concrete", "Hydro-Dam Earthworks", "Solar Park Foundations", "Refinery Structural Supports"]
   },
@@ -65,7 +65,7 @@ const SECTORS_DATA = [
     description: "We are contracted to execute specific, high-complexity packages within national highway corridors. We specialize in rapid multi-lane concrete paving and continuous tunnel-wall stabilization.",
     philosophy: "We connect topographies by conquering them. Our highway and tunnel division operates on a continuous 24/7 execution cycle, accelerating national corridor connectivity without compromising geological stability.",
     machinery: "Powered by advanced Tunnel Boring Machines (TBMs), massive hydraulic excavators, and fully automated multi-lane road-laying fleets.",
-    imageUrl: "/image20.png",
+    imageUrl: "/image20.webp",
     scaleInfo: { magnitude: "State & National Level", footprint: "Connecting Cities" },
     capabilities: ["Tunnel Wall Spray Concrete", "Multi-Lane Rigid Paving", "Highway Bridge Pillars", "Terrain Excavation"]
   },
@@ -76,7 +76,7 @@ const SECTORS_DATA = [
     description: "Acting as trusted execution partners for sovereign defense agencies, we provide armored excavation and high-strength blast-resistant concrete pouring for classified military installations.",
     philosophy: "Operating under strict confidentiality, our defense division prioritizes structural invulnerability. We engineer subterranean and blast-resistant assets that guarantee operational continuity under extreme duress.",
     machinery: "Utilizing armored excavation units, rapid-deployment concrete sprayers, and highly secure heavy-haul transport convoys for classified material movement.",
-    imageUrl: "/image21.png",
+    imageUrl: "/image21.webp",
     scaleInfo: { magnitude: "High Security", footprint: "Border Frontiers" },
     capabilities: ["Subterranean Bunkers", "Blast-Resistant Concrete", "Border Tactical Roads", "Military Hangar Frameworks"]
   },
@@ -87,7 +87,7 @@ const SECTORS_DATA = [
     description: "We execute the heavy civil engineering scope for massive hydrological projects. This includes constructing salt-water resistant storage reservoirs and laying foundations for cross-country pipelines.",
     philosophy: "We architect hydrological permanence. From deep-sea sourcing to purification, our grid executions are designed for multi-generational lifespans, ensuring sovereign water security against shifting climate variables.",
     machinery: "Deploying deep-trenching heavy excavators, high-pressure industrial pipeline laying rigs, and continuous-pour concrete systems for massive reservoirs.",
-    imageUrl: "/image22.png",
+    imageUrl: "/image22.webp",
     scaleInfo: { magnitude: "City-Wide Scale", footprint: "Water Pipelines" },
     capabilities: ["Reservoir Concrete Pouring", "Pipeline Trench Excavation", "Desalination Plant Foundations", "Effluent Treatment Structures"]
   }
@@ -96,9 +96,9 @@ const SECTORS_DATA = [
 // --- REALISTIC PROJECTS: Cestrix as an Execution Partner/Sub-Contractor ---
 const INITIAL_PROJECTS = [
   // AVIATION
-  { id: "AV-092", title: "Indira Gandhi Int. Airport - T1 Expansion", category: "aviation", magnitude: "Roofing & Structural Phase", imageUrl: "/image23.png" },
-  { id: "AV-094", title: "Bhogapuram Greenfield Airport", category: "aviation", magnitude: "Runway Paving Package", imageUrl: "/image24.png" },
-  { id: "AV-112", title: "Navi Mumbai Airport Logistics Hub", category: "aviation", magnitude: "Earthworks & Foundation", imageUrl: "/image25.png" },
+  { id: "AV-092", title: "Indira Gandhi Int. Airport - T1 Expansion", category: "aviation", magnitude: "Roofing & Structural Phase", imageUrl: "/image23.webp" },
+  { id: "AV-094", title: "Bhogapuram Greenfield Airport", category: "aviation", magnitude: "Runway Paving Package", imageUrl: "/image24.webp" },
+  { id: "AV-112", title: "Navi Mumbai Airport Logistics Hub", category: "aviation", magnitude: "Earthworks & Foundation", imageUrl: "/image25.webp" },
   
   // ENERGY
   { id: "EN-441", title: "Subansiri Hydroelectric Dam", category: "energy", magnitude: "Spillway Concrete Pouring", imageUrl: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=1600" },
@@ -258,7 +258,7 @@ export default function InfraProjects({ openVideoModal }: InfraProjectsProps) {
       
       <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden bg-black">
         <img 
-          src="/sector.jpg" 
+          src="/sector.webp" 
           alt="Cestrix Megastructures" 
           className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale-[20%]"
         />
