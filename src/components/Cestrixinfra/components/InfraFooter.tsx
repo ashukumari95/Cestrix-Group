@@ -16,7 +16,8 @@ import {
 
 interface InfraFooterProps {
   onPageChange: (page: "home" | "projects" | "fleet" | "sustainability" | "tender") => void;
-  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
+  // 🔥 FIX: Added the 4 new dynamic routes here
+  onNavigate: (view: "gateway" | "infra" | "tech" | "privacy" | "terms" | "disclaimer" | "cookies") => void;
 }
 
 export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterProps) {
@@ -112,8 +113,6 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
           
           {/* Brand */}
           <div className="lg:col-span-4 space-y-8">
-            
-            {/* 🔥 FIX: Cleaned up spacing and Title Case to perfectly match Navbar */}
             <div 
               onClick={() => onPageChange("home")}
               className="flex items-center cursor-pointer inline-flex"
@@ -182,16 +181,16 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
         </div>
       </div>
 
-      {/* 3. BOTTOM LEGAL BAR */}
+      {/* 3. BOTTOM LEGAL BAR (🔥 FIX: Har button apne sahi naye page par point karega) */}
       <div className="bg-[#050D1A] py-6 px-6 md:px-12 lg:px-24 border-t border-slate-800/80">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-light">
           <p>© {new Date().getFullYear()} Cestrix Group Limited. All Rights Reserved.</p>
-          <button 
-            onClick={() => onNavigate("governance")}
-            className="hover:text-[#4CA6FF] transition-colors cursor-pointer font-medium"
-          >
-            Governance & Legal Compliance
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+            <button onClick={() => onNavigate("privacy")} className="hover:text-[#4CA6FF] transition-colors cursor-pointer outline-none">Privacy Policy</button>
+            <button onClick={() => onNavigate("terms")} className="hover:text-[#4CA6FF] transition-colors cursor-pointer outline-none">Terms of Use</button>
+            <button onClick={() => onNavigate("disclaimer")} className="hover:text-[#4CA6FF] transition-colors cursor-pointer outline-none">Disclaimer</button>
+            <button onClick={() => onNavigate("cookies")} className="hover:text-[#4CA6FF] transition-colors cursor-pointer outline-none">Cookies Policy</button>
+          </div>
         </div>
       </div>
     </footer>

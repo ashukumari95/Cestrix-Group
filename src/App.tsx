@@ -15,7 +15,6 @@ import { HelmetProvider } from "react-helmet-async";
 // LAZY LOADING
 const CestrixInfra = lazy(() => import("./components/Cestrixinfra/CestrixInfra"));
 const CestrixTech = lazy(() => import("./components/Cestrixtech/CestrixTech"));
-const CorporateGovernance = lazy(() => import("./components/CorporateGovernance"));
 
 type AppView = "gateway" | "infra" | "tech" | "governance";
 
@@ -35,7 +34,6 @@ export default function App() {
     let newPath = "/";
     if (targetView === "infra") newPath = "/infra";
     if (targetView === "tech") newPath = "/tech";
-    if (targetView === "governance") newPath = "/governance";
     
     window.history.pushState(null, "", newPath);
     setView(targetView);
@@ -46,7 +44,6 @@ export default function App() {
       const path = window.location.pathname;
       if (path.startsWith("/infra")) setView("infra");
       else if (path.startsWith("/tech")) setView("tech");
-      else if (path.startsWith("/governance")) setView("governance");
       else setView("gateway");
     };
     window.addEventListener("popstate", handlePopState);
@@ -193,12 +190,7 @@ export default function App() {
 
             <footer className="w-full py-3 md:py-4 px-6 md:px-12 font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400 flex flex-col md:flex-row justify-between items-center gap-2 bg-[#050B14] z-50 relative border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
               <span className="text-center md:text-left">© {new Date().getFullYear()} Cestrix Group.</span>
-              <span 
-                onClick={() => handleNavigate("governance")}
-                className="text-center md:text-right hover:text-[#4CA6FF] transition-colors cursor-pointer font-semibold text-slate-300"
-              >
-                Governance
-              </span>
+              <span className="text-center md:text-right">All Rights Reserved.</span>
             </footer>
           </motion.div>
         )}

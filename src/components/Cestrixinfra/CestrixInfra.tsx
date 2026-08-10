@@ -16,9 +16,9 @@ import InfraFleet from "./pages/InfraFleet";
 import InfraSustainability from "./pages/InfraSustainability";
 import InfraTender from "./pages/InfraTender";
 
-// 🔥 UPDATED: Added "governance" to the onNavigate props
+// 🔥 UPDATED: "governance" ki jagah 4 naye legal pages ke routes add kar diye hain
 interface CestrixInfraProps {
-  onNavigate: (view: "gateway" | "infra" | "tech" | "governance") => void;
+  onNavigate: (view: "gateway" | "infra" | "tech" | "privacy" | "terms" | "disclaimer" | "cookies") => void;
 }
 
 const VALID_PAGES: InfraPage[] = ["home", "projects", "fleet", "sustainability", "tender"];
