@@ -151,7 +151,7 @@ export default function TechFooter({ onNavigate, onPageChange, hideContactForm }
                <div className="flex items-center gap-4">
                  <a href="https://www.linkedin.com/company/cestrix-group/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Linkedin className="w-4 h-4" /></a>
                  <a href="https://x.com/CestrixGroup" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Twitter className="w-4 h-4" /></a>
-                 <a href="https://www.facebook.com/share/17nJJee7Tq" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Facebook className="w-4 h-4" /></a>
+                 <a href="https://www.facebook.com/profile.php?id=61593369562397" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"><Facebook className="w-4 h-4" /></a>
                </div>
             </div>
 

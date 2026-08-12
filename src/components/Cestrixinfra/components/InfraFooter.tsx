@@ -133,9 +133,9 @@ export default function InfraFooter({ onPageChange, onNavigate }: InfraFooterPro
               Engineering the nation's most critical sovereign infrastructure. From deepwater ports to high-altitude defense corridors, we execute with absolute precision and unyielding integrity.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/company/Cestrix-infra" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Linkedin className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/company/cestrix-group/?viewAsMember=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Linkedin className="w-4 h-4" /></a>
               <a href="https://x.com/Cestrixinfra" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Twitter className="w-4 h-4" /></a>
-              <a href="https://www.facebook.com/share/17nJJee7Tq" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Facebook className="w-4 h-4" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61593369562397" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#004B87] hover:border-[#004B87] transition-all"><Facebook className="w-4 h-4" /></a>
             </div>
           </div>
 

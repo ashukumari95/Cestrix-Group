@@ -123,7 +123,7 @@ export default function InfraNavbar({
 
         {/* Social Links */}
         <a 
-          href="https://www.linkedin.com/company/Cestrix-infra" 
+          href="https://www.linkedin.com/company/cestrix-group/?viewAsMember=true" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#004B87] border border-slate-200 hover:border-[#004B87] rounded-sm transition-all duration-300 shadow-sm"
@@ -139,7 +139,7 @@ export default function InfraNavbar({
           <Twitter className="w-4 h-4" />
         </a>
         <a 
-          href="https://www.facebook.com/share/17nJJee7Tq" 
+          href="https://www.facebook.com/profile.php?id=61593369562397" 
           target="_blank" 
           rel="noopener noreferrer"
           className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#004B87] border border-slate-200 hover:border-[#004B87] rounded-sm transition-all duration-300 shadow-sm"
