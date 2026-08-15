@@ -21,21 +21,42 @@ import TermsOfUse from "./Pages/TermsOfUse";
 import Disclaimer from "./Pages/Disclaimer";
 import CookiesPolicy from "./Pages/CookiesPolicy";
 
-// 🔥 All 5 Sniper Landing Pages Imported Here
+// 🔥 Batch 1: Technical Problem Sniper Pages
 import AwsServerlessMigration from "./Pages/Solutions/AwsServerlessMigration";
 import NodejsMemoryLeakFix from "./Pages/Solutions/NodejsMemoryLeakFix";
 import LegacyAngularMigration from "./Pages/Solutions/LegacyAngularMigration";
 import SaasVaptRemediation from "./Pages/Solutions/SaasVaptRemediation";
 import MongoDbOptimization from "./Pages/Solutions/MongoDbOptimization";
 
+// 🔥 Batch 2: US/UK Top 1% Founder Targeted Pages
+import NextjsPerformanceFix from "./Pages/Solutions/NextjsPerformanceFix";
+import LegacyCodeRescue from "./Pages/Solutions/LegacyCodeRescue";
+import SaasMvpDevelopment from "./Pages/Solutions/SaasMvpDevelopment";
+import BackendScalingAws from "./Pages/Solutions/BackendScalingAws";
+import ReactNextjsMigration from "./Pages/Solutions/ReactNextjsMigration";
+import CustomApiIntegration from "./Pages/Solutions/CustomApiIntegration";
+
 interface CestrixTechProps {
   onNavigate: (view: "gateway" | "infra" | "tech" | "privacy" | "terms" | "disclaimer" | "cookies") => void;
 }
 
-// 🔥 Updated TypeScript Types with all 5 new URLs
-type TechPage = "overview" | "industry" | "services" | "insights" | "about-us" | "privacy" | "terms" | "disclaimer" | "cookies" | "solutions/aws-ec2-to-serverless" | "solutions/nodejs-memory-leak-fix" | "solutions/legacy-angular-migration" | "solutions/saas-vapt-remediation" | "solutions/mongodb-optimization";
+// 🔥 Updated TypeScript Types with all 11 new URLs
+type TechPage = 
+  | "overview" | "industry" | "services" | "insights" | "about-us" 
+  | "privacy" | "terms" | "disclaimer" | "cookies" 
+  | "solutions/aws-ec2-to-serverless" 
+  | "solutions/nodejs-memory-leak-fix" 
+  | "solutions/legacy-angular-migration" 
+  | "solutions/saas-vapt-remediation" 
+  | "solutions/mongodb-optimization"
+  | "solutions/nextjs-performance-fix"
+  | "solutions/legacy-code-rescue"
+  | "solutions/saas-mvp-development"
+  | "solutions/backend-scaling-aws"
+  | "solutions/react-nextjs-migration"
+  | "solutions/custom-api-integration";
 
-// 🔥 Updated Array with all 5 new URLs
+// 🔥 Updated Array with all 11 new URLs
 const VALID_PAGES: TechPage[] = [
   "overview", "industry", "services", "insights", "about-us", 
   "privacy", "terms", "disclaimer", "cookies", 
@@ -43,7 +64,13 @@ const VALID_PAGES: TechPage[] = [
   "solutions/nodejs-memory-leak-fix",
   "solutions/legacy-angular-migration",
   "solutions/saas-vapt-remediation",
-  "solutions/mongodb-optimization"
+  "solutions/mongodb-optimization",
+  "solutions/nextjs-performance-fix",
+  "solutions/legacy-code-rescue",
+  "solutions/saas-mvp-development",
+  "solutions/backend-scaling-aws",
+  "solutions/react-nextjs-migration",
+  "solutions/custom-api-integration"
 ];
 
 export default function CestrixTech({ onNavigate }: CestrixTechProps) {
@@ -114,12 +141,20 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
       case "disclaimer": return <Disclaimer onNavigate={onNavigate} />;
       case "cookies": return <CookiesPolicy onNavigate={onNavigate} />;
 
-      // 🔥 All 5 Sniper Problem-Solving Routes Added Here
+      // 🔥 Batch 1: Technical Problem-Solving Routes
       case "solutions/aws-ec2-to-serverless": return <AwsServerlessMigration onNavigate={onNavigate} />;
       case "solutions/nodejs-memory-leak-fix": return <NodejsMemoryLeakFix onNavigate={onNavigate} />;
       case "solutions/legacy-angular-migration": return <LegacyAngularMigration onNavigate={onNavigate} />;
       case "solutions/saas-vapt-remediation": return <SaasVaptRemediation onNavigate={onNavigate} />;
       case "solutions/mongodb-optimization": return <MongoDbOptimization onNavigate={onNavigate} />;
+
+      // 🔥 Batch 2: US/UK Market Focused Routes
+      case "solutions/nextjs-performance-fix": return <NextjsPerformanceFix onNavigate={onNavigate} />;
+      case "solutions/legacy-code-rescue": return <LegacyCodeRescue onNavigate={onNavigate} />;
+      case "solutions/saas-mvp-development": return <SaasMvpDevelopment onNavigate={onNavigate} />;
+      case "solutions/backend-scaling-aws": return <BackendScalingAws onNavigate={onNavigate} />;
+      case "solutions/react-nextjs-migration": return <ReactNextjsMigration onNavigate={onNavigate} />;
+      case "solutions/custom-api-integration": return <CustomApiIntegration onNavigate={onNavigate} />;
 
       default:
         return (
@@ -156,10 +191,24 @@ export default function CestrixTech({ onNavigate }: CestrixTechProps) {
         </motion.div>
       </main>
 
+      {/* 🔥 Footer with all routes hidden from Contact Form */}
       <TechFooter 
         onNavigate={onNavigate} 
         onPageChange={setCurrentPage} 
-        hideContactForm={["privacy", "terms", "disclaimer", "cookies", "solutions/aws-ec2-to-serverless", "solutions/nodejs-memory-leak-fix", "solutions/legacy-angular-migration", "solutions/saas-vapt-remediation", "solutions/mongodb-optimization"].includes(currentPage)}
+        hideContactForm={[
+          "privacy", "terms", "disclaimer", "cookies", 
+          "solutions/aws-ec2-to-serverless", 
+          "solutions/nodejs-memory-leak-fix", 
+          "solutions/legacy-angular-migration", 
+          "solutions/saas-vapt-remediation", 
+          "solutions/mongodb-optimization",
+          "solutions/nextjs-performance-fix",
+          "solutions/legacy-code-rescue",
+          "solutions/saas-mvp-development",
+          "solutions/backend-scaling-aws",
+          "solutions/react-nextjs-migration",
+          "solutions/custom-api-integration"
+        ].includes(currentPage)}
       />
 
     </div>

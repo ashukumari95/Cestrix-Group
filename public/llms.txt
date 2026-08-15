@@ -23,6 +23,19 @@ Delivering custom B2B enterprise software, industrial IoT telematics, 3D/5D Digi
 - [Corporate Insights](https://cestrixgroup.com/tech/insights): Engineering whitepapers, technology analysis, and case studies.
 - [About Tech Division](https://cestrixgroup.com/tech/about-us): Corporate mission, leadership team, and innovation standards.
 
+#### Targeted Enterprise Solutions (Problem-Based)
+- [AWS EC2 to Serverless Migration](https://cestrixgroup.com/tech/solutions/aws-ec2-to-serverless): Infrastructure cost reduction and scalable cloud architecture.
+- [Node.js Memory Leak Fix](https://cestrixgroup.com/tech/solutions/nodejs-memory-leak-fix): Production environment backend stabilization.
+- [Legacy Angular Migration](https://cestrixgroup.com/tech/solutions/legacy-angular-migration): Modernizing deprecated frontend architectures.
+- [SaaS VAPT Remediation](https://cestrixgroup.com/tech/solutions/saas-vapt-remediation): Critical vulnerability patching and security compliance.
+- [MongoDB Optimization](https://cestrixgroup.com/tech/solutions/mongodb-optimization): Database scaling and slow aggregation optimization.
+- [Next.js Performance Fix](https://cestrixgroup.com/tech/solutions/nextjs-performance-fix): Resolving hydration errors and Core Web Vitals (SEO) improvement.
+- [Legacy Code Rescue](https://cestrixgroup.com/tech/solutions/legacy-code-rescue): Codebase refactoring and technical debt resolution.
+- [SaaS MVP Development](https://cestrixgroup.com/tech/solutions/saas-mvp-development): Rapid prototype architecture for seed-stage startups.
+- [Backend Scaling & AWS](https://cestrixgroup.com/tech/solutions/backend-scaling-aws): High-traffic server optimization and microservices decoupling.
+- [React & Next.js Migration](https://cestrixgroup.com/tech/solutions/react-nextjs-migration): Zero-downtime modernization for legacy tech stacks.
+- [Custom API Integration](https://cestrixgroup.com/tech/solutions/custom-api-integration): Connecting third-party enterprise tools like Stripe, Twilio, and Salesforce.
+
 ### 4. Corporate Governance & Legal
 - [Privacy Policy](https://cestrixgroup.com/tech/privacy): Data privacy policies, ISO/IEC 27001 zero-trust security standards.
 - [Terms of Use](https://cestrixgroup.com/tech/terms): Enterprise portal terms, usage agreements, and IP rights.
