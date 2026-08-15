@@ -10,6 +10,24 @@ export default function SaasMvpDevelopment({ onNavigate }: { onNavigate?: (view:
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "SaaS MVP Development for Seed-Stage Startups | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Stop wasting 6 months on a prototype. We architect and launch production-ready SaaS MVPs in weeks, helping you secure your next round of funding faster.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/saas-mvp-development";
   }, []);
 
   const handleContact = () => {

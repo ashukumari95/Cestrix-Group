@@ -10,6 +10,24 @@ export default function LegacyCodeRescue({ onNavigate }: { onNavigate?: (view: s
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Legacy Code Refactoring & Software Rescue Services | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Did previous developers leave a broken mess? We specialize in auditing, fixing, and refactoring messy React & Node.js codebases with zero downtime.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/legacy-code-rescue";
   }, []);
 
   const handleContact = () => {

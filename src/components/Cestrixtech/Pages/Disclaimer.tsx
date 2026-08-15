@@ -6,8 +6,27 @@
 import { useEffect } from "react";
 
 export default function Disclaimer({ onNavigate }: { onNavigate?: (view: string) => void }) {
+  
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Legal Disclaimer | Cestrix Group";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Read the Cestrix Group Legal Disclaimer regarding our engineering estimates, technical outputs, and enterprise digital portals.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/disclaimer";
   }, []);
 
   return (

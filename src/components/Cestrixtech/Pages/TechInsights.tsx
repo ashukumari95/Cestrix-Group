@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, Briefcase, PlayCircle, ChevronRight, 
@@ -22,6 +23,30 @@ const staggerContainer = {
 };
 
 export default function TechInsights() {
+  
+  // SEO Upgrade Block
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+
+    document.title = "Software Case Studies & IT Insights | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Explore Cestrix Tech's case studies and insights on how custom software, ERPs, and IT solutions drive real business impact for heavy industries.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/insights";
+  }, []);
+
   return (
     <div className="w-full bg-[#F8FAFC] text-slate-800 font-sans selection:bg-[#002D62] selection:text-white overflow-x-hidden pt-[76px] lg:pt-[88px]">
       

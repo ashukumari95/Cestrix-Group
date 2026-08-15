@@ -10,6 +10,24 @@ export default function NextjsPerformanceFix({ onNavigate }: { onNavigate?: (vie
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Next.js Hydration Error & Core Web Vitals Expert | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Urgently debug rendering errors, fix Next.js hydration mismatches, and optimize your React architecture for 90+ Lighthouse Core Web Vitals scores.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/nextjs-performance-fix";
   }, []);
 
   const handleContact = () => {

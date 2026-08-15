@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Building2, Plane, Ship, Zap, ShieldCheck, 
@@ -13,6 +13,29 @@ import {
 
 export default function TechIndustry() {
   
+  // SEO Upgrade Block
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+
+    document.title = "Industries We Serve | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "We build simple, powerful, and highly secure software solutions tailored specifically for heavy engineering, transportation, energy, and defense sectors.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/industry";
+  }, []);
+
   const industries = [
     {
       id: "construction",

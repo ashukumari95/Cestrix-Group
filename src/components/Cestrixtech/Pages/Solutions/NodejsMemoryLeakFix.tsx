@@ -10,6 +10,24 @@ export default function NodejsMemoryLeakFix({ onNavigate }: { onNavigate?: (view
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Node.js Production Memory Leak & Crash Fix | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Diagnose, trace, and permanently resolve V8 engine memory leaks, event loop blockages, and API latency issues in Node.js production environments.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/nodejs-memory-leak-fix";
   }, []);
 
   const handleContact = () => {

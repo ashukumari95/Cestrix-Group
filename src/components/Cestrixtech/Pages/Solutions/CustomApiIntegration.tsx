@@ -10,6 +10,24 @@ export default function CustomApiIntegration({ onNavigate }: { onNavigate?: (vie
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Custom API Development & 3rd-Party Integrations | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Data silos kill businesses. We build robust custom APIs and seamlessly integrate third-party enterprise services like Stripe, Twilio, and Salesforce.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/custom-api-integration";
   }, []);
 
   const handleContact = () => {

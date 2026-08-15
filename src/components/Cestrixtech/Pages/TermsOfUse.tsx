@@ -6,8 +6,28 @@
 import { useEffect } from "react";
 
 export default function TermsOfUse({ onNavigate }: { onNavigate?: (view: string) => void }) {
+  
+  // SEO Upgrade Block
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Terms of Operations | Cestrix Group";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Read the Cestrix Group Terms of Operations. These terms constitute a legally binding corporate agreement for using our enterprise platforms and services.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/terms";
   }, []);
 
   return (

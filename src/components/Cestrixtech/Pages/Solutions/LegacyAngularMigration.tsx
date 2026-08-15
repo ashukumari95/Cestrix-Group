@@ -10,6 +10,24 @@ export default function LegacyAngularMigration({ onNavigate }: { onNavigate?: (v
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Legacy Angular Migration & Modernization Expert | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Seamlessly migrate legacy enterprise frontends from deprecated AngularJS to the latest Angular or React architectures with zero downtime.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/legacy-angular-migration";
   }, []);
 
   const handleContact = () => {

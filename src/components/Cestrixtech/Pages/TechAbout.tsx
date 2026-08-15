@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   ArrowRight, PlayCircle, Target, ShieldCheck, 
@@ -22,6 +23,29 @@ const staggerContainer = {
 };
 
 export default function TechAbout() {
+  
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+
+    document.title = "About Us | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Cestrix Tech is a premier deep-tech consultancy dedicated to modernizing heavy engineering, aviation, and national infrastructure.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/about-us";
+  }, []);
+
   return (
     <div className="w-full bg-white text-slate-800 font-sans selection:bg-[#002D62] selection:text-white overflow-x-hidden pt-[76px] lg:pt-[88px]">
       

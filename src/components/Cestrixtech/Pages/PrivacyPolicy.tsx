@@ -6,8 +6,27 @@
 import { useEffect } from "react";
 
 export default function PrivacyPolicy({ onNavigate }: { onNavigate?: (view: string) => void }) {
+  
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Global Privacy Policy | Cestrix Group";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Review the Cestrix Group Global Privacy Policy. We adhere to the highest international standards of data security and zero-trust cloud environments.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/privacy";
   }, []);
 
   return (

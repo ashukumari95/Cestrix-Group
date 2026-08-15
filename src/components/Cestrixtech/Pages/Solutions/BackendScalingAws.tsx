@@ -10,6 +10,24 @@ export default function BackendScalingAws({ onNavigate }: { onNavigate?: (view: 
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Backend Scaling & Database Optimization (Node.js/AWS) | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Are you losing users to 10-second load times? We re-architect your backend infrastructure and optimize your databases to handle 100k+ concurrent users.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/backend-scaling-aws";
   }, []);
 
   const handleContact = () => {

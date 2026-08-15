@@ -10,6 +10,24 @@ export default function MongoDbOptimization({ onNavigate }: { onNavigate?: (view
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Slow MongoDB Aggregation & Scaling Expert | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Optimize slow MongoDB queries, restructure complex aggregation pipelines, and implement advanced sharding to scale your database for enterprise loads.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/mongodb-optimization";
   }, []);
 
   const handleContact = () => {

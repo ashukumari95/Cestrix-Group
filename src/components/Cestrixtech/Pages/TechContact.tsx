@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   MapPin, Phone, Mail, Globe, 
@@ -23,6 +24,28 @@ const staggerContainer = {
 };
 
 export default function TechContact() {
+
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+
+    document.title = "Contact Us | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Schedule a confidential consultation with our senior technical architects to modernize your legacy ERP and secure your cloud infrastructure.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/contact";
+  }, []);
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

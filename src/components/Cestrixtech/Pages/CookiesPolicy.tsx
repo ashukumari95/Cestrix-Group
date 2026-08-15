@@ -6,8 +6,27 @@
 import { useEffect } from "react";
 
 export default function CookiesPolicy({ onNavigate }: { onNavigate?: (view: string) => void }) {
+  
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Cookies Policy | Cestrix Group";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Read the Cestrix Group Cookies Policy to understand how we use cookies to improve your enterprise digital experience.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/cookies";
   }, []);
 
   return (

@@ -10,6 +10,24 @@ export default function AwsServerlessMigration({ onNavigate }: { onNavigate?: (v
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "AWS EC2 to Serverless Migration Expert | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Stop overpaying for idle EC2 servers. Migrate your legacy monolith backend to a highly scalable AWS Serverless architecture.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/aws-ec2-to-serverless";
   }, []);
 
   // 🔥 FIX: Button ab properly kaam karega aur seedha mail open karega

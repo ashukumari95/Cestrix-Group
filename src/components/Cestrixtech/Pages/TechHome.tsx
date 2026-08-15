@@ -14,6 +14,29 @@ import {
 export default function TechHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // SEO Upgrade Block
+  useEffect(() => { 
+    window.scrollTo(0, 0); 
+
+    document.title = "Enterprise Digital Technology Integration | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Transform heavy industries through advanced digital ecosystems, custom B2B enterprise software, and zero-trust cloud architectures.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech";
+  }, []);
+
   // 5 Slides 
   const slides = [
     {

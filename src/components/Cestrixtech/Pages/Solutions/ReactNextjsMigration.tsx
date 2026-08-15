@@ -10,6 +10,24 @@ export default function ReactNextjsMigration({ onNavigate }: { onNavigate?: (vie
   
   useEffect(() => { 
     window.scrollTo(0, 0); 
+
+    document.title = "Seamless Migration to Modern Web Stacks (React & Next.js) | Cestrix Tech";
+
+    let metaDescription = document.querySelector("meta[name='description']") as HTMLMetaElement;
+    if (!metaDescription) {
+      metaDescription = document.createElement("meta");
+      metaDescription.name = "description";
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.content = "Safely migrate your outdated systems (PHP, jQuery, Legacy Angular) to high-performance, SEO-friendly React and Next.js architectures with zero downtime.";
+
+    let canonicalTag = document.querySelector("link[rel='canonical']") as HTMLLinkElement;
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = "https://cestrixgroup.com/tech/solutions/react-nextjs-migration";
   }, []);
 
   const handleContact = () => {
