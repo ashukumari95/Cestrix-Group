@@ -315,6 +315,6 @@ export default function TechContact() {
         </div>
       </section>
 
-    </div>
+    </div>,
   );
 }
